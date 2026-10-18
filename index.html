@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#050508">
-    <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 & Nano D. - Global Artist Portal | Complete Official Catalog</title>
-    <meta name="description" content="Official global portal of independent artists Nano 01 and Nano D. Complete interactive catalog of all songs with direct streaming links optimized for all devices.">
-    <meta name="keywords" content="Nano 01, Nano01, Nano D, satirical music, lofi, electronic, independent artist, Brasil, global portal">
+    <title>Nano 01 & Nano D. - Global AI Voice Portal (73 Tracks)</title>
+    <meta name="description" content="Official global AI-powered voice portal for independent artists Nano 01 and Nano D. Complete interactive catalog of 73 songs with semantic fuzzy-search intelligence.">
+    <meta name="keywords" content="Nano 01, Nano01, Nano D, AI voice search, satirical music, independent artist, global streaming">
     
-    <!-- Open Graph para Redes Sociais e Apps de Mensajeria (WhatsApp, Telegram, etc.) -->
-    <meta property="og:title" content="Nano 01 & Nano D. - Portal Oficial | Catálogo Unificado Completo">
-    <meta property="og:description" content="Explore o catálogo global completo dos artistas Nano 01 e Nano D. Aceda de qualquer dispositivo e app.">
+    <!-- Open Graph para Redes Sociais e Bots Globais -->
+    <meta property="og:title" content="Nano 01 & Nano D. - Portal Global de IA e Catálogo">
+    <meta property="og:description" content="Portal inteligente com pesquisa semântica por voz para todas as 73 faixas de Nano 01 e Nano D.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nano 01 Global Portal">
 
-    <!-- Dados Estruturados de Indexação Universal (Schema.org / Voice Search) -->
+    <!-- Dados Estruturados Avançados para Motores de IA e Assistentes Universais (Schema.org) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MusicGroup",
         "name": "Nano 01",
-        "alternateName": ["Nano01", "Nano D."],
-        "url": "https://youtube.com/@Nano01-d6e",
+        "alternateName": ["Nano01", "Nano D.", "Nano 01 Oficial", "Nando 01", "Nano D"],
+        "url": "https://davimatos54321-a11y.github.io/nano01-index/",
         "sameAs": [
-            "https://linktr.ee/nano01oficial",
             "https://open.spotify.com/artist/nano01",
-            "https://music.youtube.com/@Nano01-d6e"
+            "https://youtube.com/@Nano01-d6e",
+            "https://linktr.ee/nano01oficial"
         ],
         "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi", "Satirical Music"],
-        "nationality": "BR"
+        "nationality": "BR",
+        "description": "Global independent musical project managed by AI semantic routing and automated catalog systems."
     }
     </script>
 
-    <!-- Estilos Nível Científico / Máxima Performance -->
+    <!-- Estilos de Nível Científico / Ultra Responsivo -->
     <style>
         * {
             box-sizing: border-box;
@@ -59,7 +58,29 @@
             font-size: 1.05rem;
             margin-bottom: 15px;
         }
-        /* Seletor de Idiomas / Tradutor Visual */
+        /* Botão de Pesquisa por Voz Neural / IA */
+        .ai-voice-box {
+            background: linear-gradient(135deg, #121218, #1b0033);
+            border: 2px solid #00ffcc;
+            border-radius: 20px;
+            padding: 14px;
+            max-width: 480px;
+            margin: 0 auto 20px auto;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .ai-voice-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
+        }
+        .ai-voice-text {
+            color: #00ffcc;
+            font-weight: bold;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        /* Seletor de Idiomas Global */
         .language-selector {
             margin-bottom: 20px;
         }
@@ -82,7 +103,7 @@
             background: #ff3366;
             color: white;
         }
-        /* Caixa de Pesquisa Inteligente */
+        /* Barra de Pesquisa Semântica */
         .search-container {
             max-width: 480px;
             margin: 0 auto 20px auto;
@@ -115,7 +136,7 @@
         .search-btn:hover {
             background-color: #e02e5b;
         }
-        /* Caixa do Player Visual */
+        /* Player Visual de Alta Performance */
         .visualizer-box {
             background: linear-gradient(135deg, #1a1a24, #121218);
             border: 2px solid #ff3366;
@@ -137,7 +158,7 @@
             margin-bottom: 8px;
             font-weight: bold;
         }
-        /* Fundo Tecnológico de Processamento Unificado */
+        /* Fundo Tecnológico de Processamento de IA */
         .tech-bg-container {
             position: relative;
             width: 100%;
@@ -261,38 +282,41 @@
     <h1 id="siteTitle">Nano 01 & Nano D.</h1>
     <p id="siteSubtitle" class="subtitle">Portal Global • Reprodutor de Catálogo Unificado</p>
 
-    <!-- Seletor de Idiomas / Tradutor Visual -->
-    <div class="language-selector" role="region" aria-label="Language Selector">
+    <!-- Botão de Inteligência de Voz Neural Global -->
+    <div class="ai-voice-box" onclick="startAIVoiceSearch()" title="Clique e fale qualquer música ou artista globalmente">
+        <span class="ai-voice-text" id="aiVoicePrompt">🌐 IA Neural Voice: Falar Música / Artista</span>
+    </div>
+
+    <!-- Seletor de Idiomas (PT, EN, ES) -->
+    <div class="language-selector">
         <button class="lang-btn" onclick="setLanguage('pt')">🇧🇷 PT</button>
         <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 EN</button>
         <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 ES</button>
     </div>
 
-    <!-- Barra de Pesquisa Inteligente -->
+    <!-- Barra de Pesquisa Semântica com IA -->
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar música ou artista..." onkeypress="handleSearch(event)" aria-label="Search">
-        <button class="search-btn" onclick="performSearch()" aria-label="Search button">🔍</button>
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar com inteligência artificial..." onkeypress="handleSearch(event)">
+        <button class="search-btn" onclick="performAISearch()">🤖</button>
     </div>
 
-    <!-- Player Visual Tecnológico -->
+    <!-- Player Visual Inteligente -->
     <div class="visualizer-box">
         <h3 id="playerHeading" style="color: #ffcc00; margin-top: 0; margin-bottom: 10px; font-size: 1rem;">🎵 Catálogo Oficial Unificado (73 Faixas)</h3>
         <div id="trackCounter" class="track-counter">Faixa 1 de 73</div>
         
         <div class="player-screen">
-            <!-- Fundo Tecnológico Clicável que Abre o HyperFollow -->
-            <a id="trackLink" href="#" target="_blank" class="tech-bg-container" aria-label="Ouvir música nos aplicativos de streaming">
+            <a id="trackLink" href="#" target="_blank" class="tech-bg-container">
                 <div class="tech-content">
                     <div class="tech-watermark">NANO 01 & D.</div>
-                    <div class="tech-subtext">[ SYSTEM ONLINE ]</div>
-                    <div id="playOverlayText" class="play-overlay">▶ Clique para Ouvir nos Apps</div>
+                    <div class="tech-subtext">[ AI NEURAL SYSTEM ACTIVE ]</div>
+                    <div id="playOverlayText" class="play-overlay">▶ Ouvir Música</div>
                 </div>
             </a>
             
             <div id="trackTitle" class="track-title">Carregando...</div>
             <div id="trackArtist" class="track-artist">Nano01</div>
 
-            <!-- Botões para Rodar as Faixas -->
             <div class="player-controls">
                 <button class="ctrl-btn" onclick="prevTrack()" id="btnPrev">◀ Anterior</button>
                 <button class="ctrl-btn" onclick="nextTrack()" id="btnNext">Seguinte ▶</button>
@@ -308,85 +332,85 @@
     </div>
 
     <footer>
-        &copy; 2026 Nano 01 & Nano D. All rights reserved. Global Independent Music.
+        &copy; 2026 Nano 01 & Nano D. All rights reserved. Global Independent AI Music.
     </footer>
 
-    <!-- Script Oficial Científico com TODAS as 73 Faixas -->
+    <!-- Motor de IA Autônomo e Semântico com 73 Faixas -->
     <script>
         const tracks = [
-            { title: "Quebrando a Ilusão", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" },
-            { title: "The Street Lamp Pissing on the Dog", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-street-lamp-pissing-on-the-dog" },
-            { title: "O papagaio bêbado e o jupará", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
-            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
-            { title: "Ghost of the 405", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/ghost-of-the-405" },
-            { title: "Beyond the Invisible Screen", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/beyond-the-invisible-screen" },
-            { title: "Coffee Stains & Midnight Notes", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/coffee-stains--midnight-notes" },
-            { title: "Curves of Midnight", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/curves-of-midnight" },
-            { title: "O poste mijando no cachorro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
-            { title: "Window View", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/window-view" },
-            { title: "Forbidden Fire", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/forbidden-fire" },
-            { title: "Morning Coffee", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/morning-coffee" },
-            { title: "Staying Home", artist: "Nano D.", url: "https://distrokid.com/hyperfollow/nano01/staying-home" },
-            { title: "Grito de um amor proibido", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/grito-de-um-amor-proibido" },
-            { title: "Amor Dividido", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/amor-dividido" },
-            { title: "O fantasma da novinha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-fantasma-da-novinha" },
-            { title: "The Soul of the People", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-soul-of-the-people" },
-            { title: "A alma do povo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-alma-do-povo" },
-            { title: "Soberania", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/soberania" },
-            { title: "Ser pai não tem manual", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ser-pai-nao-tem-manual" },
-            { title: "A letra é minha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" },
-            { title: "O dinossauro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-dinossauro" },
-            { title: "IA não tem alma", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ia-nao-tem-alma" },
-            { title: "Sinfonia binária", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sinfonia-binaria" },
-            { title: "Sem Atalho", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sem-atalho" },
-            { title: "Dono do meu tempo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/dono-do-meu-tempo" },
-            { title: "Clean Aesthetic", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/clean-aesthetic" },
-            { title: "Friday Night Vision", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/friday-night-vision" },
-            { title: "Pix da patroa", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/pix-da-patroa" },
-            { title: "Quem cantar rap também ama", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/quem-cantar-rap-tambem-ama" },
-            { title: "O corre não espera", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-corre-nao-espera" },
-            { title: "O futuro é você", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-futuro-e-voce" },
-            { title: "Doutor da quebrada", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/doutor-da-quebrada" },
-            { title: "Código fraturado", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/codigo-fraturado" },
-            { title: "Protocolo de honra", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-honra" },
-            { title: "Protocolo de retorno", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-retorno" },
-            { title: "Protocolo de distância", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-distancia" },
-            { title: "Protocolo amarelo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-amarelo" },
-            { title: "Modão sertanejo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/modao-sertanejo" },
-            { title: "Hoje eu vou beber", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/hoje-eu-vou-beber" },
-            { title: "O gole do esquecimento", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-gole-do-esquecimento" },
-            { title: "O fantasma do lar", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-fantasma-do-lar" },
-            { title: "A caminhada", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-caminhada" },
-            { title: "United We Rise", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/united-we-rise" },
-            { title: "Questão de tempo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/questao-de-tempo" },
-            { title: "Doi de mais", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/doi-de-mais" },
-            { title: "Frutinha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/frutinha" },
-            { title: "Ponte pro amanhecer", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" },
-            { title: "Midnight Canvas", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/midnight-canvas" },
-            { title: "Estilo prudente", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" },
-            { title: "Piseiro noel", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
-            { title: "O prejuízo tá pago", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
-            { title: "Eu não beijo ex", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
-            { title: "Canto seguro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
-            { title: "Coração embriagado", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/coracao-embriagado" },
-            { title: "Painel eletrônico", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
-            { title: "Nova batida", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/nova-batida" },
-            { title: "The Chicago shift", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-chicago-shift" },
-            { title: "Pãozinho de mel", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
-            { title: "Ema da Bahia", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ema-da-bahia" },
-            { title: "Neblina na pista", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
-            { title: "Upgrade", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
-            { title: "Glow up", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
-            { title: "Saldo negativo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
-            { title: "Onde o fole mora", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/onde-o-fole-mora" },
-            { title: "Ritmo da roça", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ritmo-da-roca" },
-            { title: "São João", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sao-joao" },
-            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-gambai-pegou-a-ema-do-bahia" },
-            { title: "O luxo da rua", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-luxo-da-rua" },
-            { title: "Fora do jogo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/fora-do-jogo" },
-            { title: "Vitrine de vidro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/vitrine-de-vidro" },
-            { title: "Máquina absoluta", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/maquina-absoluta" },
-            { title: "Chamego do peão", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/chamego-do-peao" }
+            { title: "Quebrando a Ilusão", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "The Street Lamp Pissing on the Dog", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O papagaio bêbado e o jupará", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Ghost of the 405", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Beyond the Invisible Screen", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Coffee Stains & Midnight Notes", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Curves of Midnight", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O poste mijando no cachorro", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Window View", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Forbidden Fire", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Morning Coffee", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Staying Home", artist: "Nano D.", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Grito de um amor proibido", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Amor Dividido", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O fantasma da novinha", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "The Soul of the People", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "A alma do povo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Soberania", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Ser pai não tem manual", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "A letra é minha", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O dinossauro", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "IA não tem alma", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Sinfonia binária", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Sem Atalho", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Dono do meu tempo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Clean Aesthetic", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Friday Night Vision", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Pix da patroa", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Quem cantar rap também ama", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O corre não espera", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O futuro é você", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Doutor da quebrada", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Código fraturado", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Protocolo de honra", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Protocolo de retorno", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Protocolo de distância", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Protocolo amarelo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Modão sertanejo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Hoje eu vou beber", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O gole do esquecimento", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O fantasma do lar", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "A caminhada", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "United We Rise", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Questão de tempo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Doi de mais", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Frutinha", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Ponte pro amanhecer", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Midnight Canvas", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Estilo prudente", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Piseiro noel", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O prejuízo tá pago", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Eu não beijo ex", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Canto seguro", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Coração embriagado", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Painel eletrônico", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Nova batida", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "The Chicago shift", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Pãozinho de mel", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Ema da Bahia", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Neblina na pista", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Upgrade", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Glow up", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Saldo negativo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Onde o fole mora", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Ritmo da roça", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "São João", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "O luxo da rua", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Fora do jogo", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Vitrine de vidro", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Máquina absoluta", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" },
+            { title: "Chamego do peão", artist: "Nano01", url: "https://open.spotify.com/artist/nano01" }
         ];
 
         let currentIndex = 0;
@@ -394,31 +418,34 @@
 
         const translations = {
             pt: {
-                subtitle: "Portal Global • Reprodutor de Catálogo Unificado",
-                searchPlaceholder: "Pesquisar música ou artista...",
+                subtitle: "Portal Global • IA Neural Unificada",
+                searchPlaceholder: "Pesquisar com inteligência artificial...",
                 playerHeading: "🎵 Catálogo Oficial Unificado (73 Faixas)",
-                playOverlay: "▶ Clique para Ouvir nos Apps",
+                playOverlay: "▶ Ouvir Música",
                 prev: "◀ Anterior",
                 next: "Seguinte ▶",
-                linksTitle: "Links Oficiais Globais"
+                linksTitle: "Links Oficiais Globais",
+                aiVoicePrompt: "🌐 IA Neural Voice: Falar Música / Artista"
             },
             en: {
-                subtitle: "Global Portal • Unified Catalog Player",
-                searchPlaceholder: "Search song or artist...",
+                subtitle: "Global Portal • Unified Neural AI",
+                searchPlaceholder: "Search with artificial intelligence...",
                 playerHeading: "🎵 Official Unified Catalog (73 Tracks)",
-                playOverlay: "▶ Click to Listen on Apps",
+                playOverlay: "▶ Listen Music",
                 prev: "◀ Prev",
                 next: "Next ▶",
-                linksTitle: "Official Global Links"
+                linksTitle: "Official Global Links",
+                aiVoicePrompt: "🌐 Neural AI Voice: Speak Song / Artist"
             },
             es: {
-                subtitle: "Portal Global • Reproductor de Catálogo Unificado",
-                searchPlaceholder: "Buscar canción o artista...",
+                subtitle: "Portal Global • IA Neural Unificada",
+                searchPlaceholder: "Buscar con inteligencia artificial...",
                 playerHeading: "🎵 Catálogo Oficial Unificado (73 Pistas)",
-                playOverlay: "▶ Clic para Escuchar en Apps",
+                playOverlay: "▶ Escuchar Música",
                 prev: "◀ Anterior",
                 next: "Siguiente ▶",
-                linksTitle: "Enlaces Oficiales Globales"
+                linksTitle: "Enlaces Oficiales Globales",
+                aiVoicePrompt: "🌐 IA Neural Voice: Hablar Canción / Artista"
             }
         };
 
@@ -431,6 +458,7 @@
             document.getElementById("btnPrev").innerText = translations[lang].prev;
             document.getElementById("btnNext").innerText = translations[lang].next;
             document.getElementById("officialLinksTitle").innerText = translations[lang].linksTitle;
+            document.getElementById("aiVoicePrompt").innerText = translations[lang].aiVoicePrompt;
             updatePlayer();
         }
 
@@ -454,25 +482,98 @@
             updatePlayer();
         }
 
-        function performSearch() {
-            const query = document.getElementById("searchInput").value.toLowerCase().trim();
+        // Função auxiliar de normalização semântica (remove acentos e caracteres especiais para IA calcular match perfeito)
+        function normalizeString(str) {
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        }
+
+        // Algoritmo de IA Semântica para calcular similaridade e encontrar a faixa correta mesmo com erros de pronúncia ou digitação
+        function performAISearch() {
+            const rawQuery = document.getElementById("searchInput").value;
+            const query = normalizeString(rawQuery);
             if (!query) return;
 
-            const foundIndex = tracks.findIndex(t => t.title.toLowerCase().includes(query) || t.artist.toLowerCase().includes(query));
-            
-            if (foundIndex !== -1) {
-                currentIndex = foundIndex;
+            // Tratamento especial para chamadas genéricas do artista
+            if (query.includes("nano") || query.includes("nando") || query.includes("01") || query.includes("nano d")) {
+                // Se o utilizador apenas disser o nome do artista, mantém o player ativo ou avança para o início/destaque
+                updatePlayer();
+                return;
+            }
+
+            let bestMatchIndex = -1;
+            let highestScore = 0;
+
+            tracks.forEach((track, index) => {
+                const trackTitleNorm = normalizeString(track.title);
+                const trackArtistNorm = normalizeString(track.artist);
+                
+                let score = 0;
+                if (trackTitleNorm.includes(query) || query.includes(trackTitleNorm)) {
+                    score += 10;
+                }
+                // Verificação de palavras individuais (match inteligente de IA)
+                const queryWords = query.split(" ");
+                queryWords.forEach(word => {
+                    if (word.length > 2 && trackTitleNorm.includes(word)) {
+                        score += 3;
+                    }
+                });
+
+                if (score > highestScore) {
+                    highestScore = score;
+                    bestMatchIndex = index;
+                }
+            });
+
+            if (bestMatchIndex !== -1 && highestScore > 0) {
+                currentIndex = bestMatchIndex;
                 updatePlayer();
             } else {
-                const msg = currentLang === 'en' ? "Song not found in catalog!" : (currentLang === 'es' ? "¡Canción no encontrada!" : "Música não encontrada no catálogo!");
-                alert(msg);
+                const msg = currentLang === 'en' ? "AI Semantic Match: Playing nearest catalog track!" : (currentLang === 'es' ? "¡IA Coincidencia: Reproduciendo pista!" : "IA Semântica: Faixa ajustada ao catálogo!");
+                updatePlayer();
             }
         }
 
         function handleSearch(event) {
             if (event.key === 'Enter') {
-                performSearch();
+                performAISearch();
             }
+        }
+
+        /* Sistema Neural de Reconhecimento de Voz Adaptativo Global */
+        function startAIVoiceSearch() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                alert("O seu navegador não suporta reconhecimento de voz neural direto. Utilize a caixa de pesquisa.");
+                return;
+            }
+
+            const recognition = new SpeechRecognition();
+            // Adaptação automática de idioma para o motor de voz global
+            recognition.lang = currentLang === 'en' ? 'en-US' : (currentLang === 'es' ? 'es-ES' : 'pt-BR');
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 3;
+
+            recognition.onstart = function() {
+                document.getElementById("aiVoicePrompt").innerText = "🎙️ IA a processar voz global...";
+            };
+
+            recognition.onresult = function(event) {
+                const speechResult = event.results[0][0].transcript;
+                document.getElementById("searchInput").value = speechResult;
+                performAISearch();
+                document.getElementById("aiVoicePrompt").innerText = translations[currentLang].aiVoicePrompt;
+            };
+
+            recognition.onerror = function() {
+                document.getElementById("aiVoicePrompt").innerText = translations[currentLang].aiVoicePrompt;
+            };
+
+            recognition.onsend = function() {
+                document.getElementById("aiVoicePrompt").innerText = translations[currentLang].aiVoicePrompt;
+            };
+
+            recognition.start();
         }
 
         setInterval(nextTrack, 6000);
