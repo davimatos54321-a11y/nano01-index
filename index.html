@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#050508">
     <title>Nano 01 & Nano D. - Portal Oficial de Streaming</title>
-    <meta name="description" content="Portal oficial dos artistas independentes Nano 01 e Nano D. Catálogo unificado de 73 faixas com audição direta.">
+    <meta name="description" content="Portal oficial dos artistas Nano 01 e Nano D. Catálogo completo com 73 faixas nas plataformas principais.">
     
     <!-- Open Graph para Motores de Busca -->
     <meta property="og:title" content="Nano 01 & Nano D. - Portal Oficial">
@@ -211,7 +211,7 @@
             background: #ff3366;
         }
         
-        /* Modal de Seleção Direta e Funcional */
+        /* Modal Direto e Funcional com as 3 Principais Plataformas */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -301,12 +301,12 @@
     <p class="subtitle">Portal Oficial & Produtora • IA Neural Integrada</p>
 
     <div class="ai-voice-box" onclick="startAIVoiceSearch()">
-        <span class="ai-voice-text" id="aiVoicePrompt">🎤 IA Neural Voice: Falar Música ou Artista</span>
+        <span class="ai-voice-text" id="aiVoicePrompt">🎤 Falar Nome da Música ou Artista</span>
     </div>
 
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar com inteligência artificial..." onkeypress="handleSearch(event)">
-        <button class="search-btn" onclick="performAISearch()">🤖</button>
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar música..." onkeypress="handleSearch(event)">
+        <button class="search-btn" onclick="performAISearch()">🔍</button>
     </div>
 
     <div class="visualizer-box">
@@ -332,13 +332,13 @@
         </div>
     </div>
 
-    <!-- Modal Direto e Funcional com as Plataformas Oficiais -->
+    <!-- Modal Direto com as 3 Principais Plataformas Oficiais -->
     <div id="platformModal" class="modal-overlay" onclick="closePlatformModalOnOutside(event)">
         <div class="modal-content">
             <div class="modal-title" id="modalSongTitle">Onde quer ouvir?</div>
-            <a id="linkSpotify" class="platform-btn" href="#" target="_blank">🟢 Ouvir no Spotify</a>
-            <a id="linkYouTube" class="platform-btn" href="#" target="_blank">🔴 Ouvir no YouTube Music</a>
-            <a id="linkApple" class="platform-btn" href="#" target="_blank">🟣 Ouvir no Apple Music</a>
+            <a id="linkSpotify" class="platform-btn" href="https://open.spotify.com/artist/nano01" target="_blank">🟢 Ouvir no Spotify</a>
+            <a id="linkYouTube" class="platform-btn" href="https://youtube.com/@Nano01-d6e" target="_blank">🔴 Ouvir no YouTube Music</a>
+            <a id="linkApple" class="platform-btn" href="https://music.apple.com" target="_blank">🟣 Ouvir no Apple Music</a>
             <button class="close-modal" onclick="closePlatformModal()">Fechar</button>
         </div>
     </div>
@@ -526,9 +526,9 @@
             rec.onresult = (e) => {
                 document.getElementById("searchInput").value = e.results[0][0].transcript;
                 performAISearch();
-                document.getElementById("aiVoicePrompt").innerText = "🎤 IA Neural Voice: Falar Música ou Artista";
+                document.getElementById("aiVoicePrompt").innerText = "🎤 Falar Nome da Música ou Artista";
             };
-            rec.onerror = () => { document.getElementById("aiVoicePrompt").innerText = "🎤 IA Neural Voice: Falar Música ou Artista"; };
+            rec.onerror = () => { document.getElementById("aiVoicePrompt").innerText = "🎤 Falar Nome da Música ou Artista"; };
             rec.start();
         }
 
