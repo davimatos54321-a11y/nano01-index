@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 - Global Artist Portal | Official Music & Interactive Catalog</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01 (Nano01, Nano D). Explore the complete music catalog and listen on your favorite apps.">
+    <title>Nano 01 - Global Artist Portal | Interactive Cover Player</title>
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Click on any track cover to listen on your preferred streaming app.">
     <meta name="keywords" content="Nano 01, Nano01, Nano D, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brasil">
     
     <!-- Open Graph para Redes Sociais -->
-    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Global & Músicas">
-    <meta property="og:description" content="Explore o portal global e interativo do artista independente Nano 01. Ouça em todas as plataformas.">
+    <meta property="og:title" content="Nano 01 - Portal Oficial | Player de Capas Interativo">
+    <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique nas capas para ouvir.">
     <meta property="og:type" content="website">
 
-    <!-- Dados Estruturados de Indexação Universal (Schema.org / MusicGroup) -->
+    <!-- Dados Estruturados de Indexação Universal (Schema.org) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,27 +27,11 @@
             "https://music.youtube.com/@Nano01-d6e"
         ],
         "genre": ["Brega Funk", "Protest Satire", "Comedy Music", "Satirical Music"],
-        "nationality": "BR",
-        "track": [
-            {
-                "@type": "MusicRecording",
-                "name": "O poste mijando no cachorro",
-                "alternateName": [
-                    "The streetlight peeing on the dog",
-                    "El poste orinando al perro",
-                    "Le lampadaire urinant sur le chien"
-                ]
-            },
-            {
-                "@type": "MusicRecording",
-                "name": "Chora no 22 Bebê",
-                "alternateName": "Cry on the 22 Baby"
-            }
-        ]
+        "nationality": "BR"
     }
     </script>
 
-    <!-- Estilos Nível Ouro (Design Imersivo & Grelha de Lançamentos) -->
+    <!-- Estilos Nível Ouro para o Carrossel de Capas -->
     <style>
         body {
             background-color: #0b0b0e;
@@ -68,79 +52,88 @@
             font-size: 1.05rem;
             margin-bottom: 30px;
         }
-        /* Experiência Visual Ativa */
+        /* Caixa do Player Visual */
         .visualizer-box {
             background: linear-gradient(135deg, #1a1a24, #121218);
             border: 2px solid #ff3366;
-            border-radius: 16px;
-            padding: 30px;
-            max-width: 650px;
+            border-radius: 18px;
+            padding: 25px;
+            max-width: 480px;
             margin: 0 auto 30px auto;
-            box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 35px rgba(255, 51, 102, 0.35);
         }
-        .pulse-circle {
-            width: 75px;
-            height: 75px;
-            background: #ff3366;
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            animation: pulseGlow 2s infinite;
-        }
-        @keyframes pulseGlow {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255, 51, 102, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 102, 0); }
-        }
-        /* Grelha de Lançamentos do Catálogo */
-        .releases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 850px;
-            margin: 0 auto 35px auto;
-            text-align: left;
-        }
-        .release-card {
-            background: #121218;
+        .player-screen {
+            background: #0b0b0e;
+            border-radius: 14px;
+            padding: 15px;
             border: 1px solid #2a2a38;
-            border-radius: 12px;
-            padding: 16px;
-            transition: transform 0.2s, border-color 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
-        .release-card:hover {
-            transform: translateY(-4px);
-            border-color: #ff3366;
+        /* Capa Clicável */
+        .album-cover-container {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: block;
         }
-        .release-title {
-            font-size: 1.05rem;
+        .album-cover-container img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .album-cover-container:hover img {
+            transform: scale(1.02);
+        }
+        .play-overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 51, 102, 0.95);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+        .track-title {
+            font-size: 1.15rem;
             font-weight: bold;
             color: #fff;
             margin-bottom: 4px;
         }
-        .release-artist {
-            font-size: 0.85rem;
-            color: #a0a0b0;
-            margin-bottom: 14px;
-        }
-        .btn-listen {
-            display: block;
-            width: 100%;
-            background-color: #ff3366;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+        .track-artist {
             font-size: 0.9rem;
-            transition: background 0.3s;
-            box-sizing: border-box;
+            color: #ff3366;
+            margin-bottom: 15px;
         }
-        .btn-listen:hover {
-            background-color: #e02e5b;
+        /* Botões de Navegação */
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
         }
-        /* Links Oficiais Globais */
+        .ctrl-btn {
+            background: #1a1a24;
+            color: white;
+            border: 1px solid #ff3366;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .ctrl-btn:hover {
+            background: #ff3366;
+        }
+        /* Links Globais */
         .links-container {
             display: flex;
             justify-content: center;
@@ -152,19 +145,18 @@
             background-color: #1a1a24;
             border: 1px solid #ff3366;
             color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 10px 22px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: background 0.3s, transform 0.2s;
+            font-size: 0.85rem;
+            transition: background 0.3s;
         }
         .btn-link:hover {
             background-color: #ff3366;
-            transform: translateY(-2px);
         }
         footer {
-            margin-top: 40px;
+            margin-top: 35px;
             color: #707080;
             font-size: 0.85rem;
         }
@@ -173,66 +165,108 @@
 <body>
 
     <h1>Nano 01</h1>
-    <p class="subtitle">Global Portal • Independent Satirical & Protest Music</p>
+    <p class="subtitle">Global Portal • Interactive Catalog Player</p>
 
-    <!-- Experiência Visual Ativa -->
+    <!-- Player Visual Dinâmico no Topo -->
     <div class="visualizer-box">
-        <div class="pulse-circle"></div>
-        <h2>Experiência Global Ativa</h2>
-        <p>A conectar a arte independente e a sátira social a ouvintes em todo o planeta.</p>
-    </div>
+        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 15px; font-size: 1rem;">🎵 Catálogo em Destaque</h3>
+        
+        <div class="player-screen">
+            <!-- Imagem da Capa Clicável -->
+            <a id="trackLink" href="#" target="_blank" class="album-cover-container">
+                <img id="trackImage" src="" alt="Capa da Música">
+                <div class="play-overlay">▶ Clique para Ouvir nos Apps</div>
+            </a>
+            
+            <div id="trackTitle" class="track-title">Carregando...</div>
+            <div id="trackArtist" class="track-artist">Nano01</div>
 
-    <!-- Catálogo de Lançamentos DistroKid -->
-    <div class="releases-grid">
-
-        <div class="release-card">
-            <div class="release-title">O poste mijando no cachorro</div>
-            <div class="release-artist">Nano01</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" target="_blank">Ouvir nos Apps / Play</a>
+            <!-- Botões para Rodar as Capas -->
+            <div class="player-controls">
+                <button class="ctrl-btn" onclick="prevTrack()">◀ Anterior</button>
+                <button class="ctrl-btn" onclick="nextTrack()">Seguinte ▶</button>
+            </div>
         </div>
-
-        <div class="release-card">
-            <div class="release-title">Chora no 22 bebê</div>
-            <div class="release-artist">Nano01 / MC Ousadia</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" target="_blank">Ouvir nos Apps / Play</a>
-        </div>
-
-        <div class="release-card">
-            <div class="release-title">O papagaio bêbado e o jupará</div>
-            <div class="release-artist">Nano01</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" target="_blank">Ouvir nos Apps / Play</a>
-        </div>
-
-        <div class="release-card">
-            <div class="release-title">Quebrando a Ilusão</div>
-            <div class="release-artist">Nano01</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" target="_blank">Ouvir nos Apps / Play</a>
-        </div>
-
-        <div class="release-card">
-            <div class="release-title">Ponte pro amanhecer</div>
-            <div class="release-artist">Nano01</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" target="_blank">Ouvir nos Apps / Play</a>
-        </div>
-
-        <div class="release-card">
-            <div class="release-title">Sem Atalho</div>
-            <div class="release-artist">Nano01</div>
-            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/sem-atalho" target="_blank">Ouvir nos Apps / Play</a>
-        </div>
-
     </div>
 
     <h2>Links Oficiais Globais / Official Links</h2>
     <div class="links-container">
         <a class="btn-link" href="https://open.spotify.com/artist/nano01" target="_blank">Spotify</a>
         <a class="btn-link" href="https://youtube.com/@Nano01-d6e" target="_blank">YouTube Music</a>
-        <a class="btn-link" href="https://linktr.ee/nano01oficial" target="_blank">Linktree Oficial</a>
+        <a class="btn-link" href="https://linktr.ee/nano01oficial" target="_blank">Linktree</a>
     </div>
 
     <footer>
         &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
     </footer>
+
+    <!-- Script com as faixas principais e capas oficiais do catálogo -->
+    <script>
+        const tracks = [
+            {
+                title: "O poste mijando no cachorro",
+                artist: "Nano01",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/c359a686b24d7889e47761005fbc746c.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro"
+            },
+            {
+                title: "Chora no 22 bebê",
+                artist: "Nano01 / MC Ousadia",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/chora-no-22-bebe.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb"
+            },
+            {
+                title: "O papagaio bêbado e o jupará",
+                artist: "Nano01",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/papagaio-jupara.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar"
+            },
+            {
+                title: "Quebrando a Ilusão",
+                artist: "Nano01",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/quebrando-ilusao.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao"
+            },
+            {
+                title: "Ponte pro amanhecer",
+                artist: "Nano01",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ponte-amanhecer.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer"
+            },
+            {
+                title: "Sem Atalho",
+                artist: "Nano01",
+                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/sem-atalho.jpg",
+                url: "https://distrokid.com/hyperfollow/nano01/sem-atalho"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function updatePlayer() {
+            const track = tracks[currentIndex];
+            document.getElementById("trackTitle").innerText = track.title;
+            document.getElementById("trackArtist").innerText = track.artist;
+            document.getElementById("trackImage").src = track.image;
+            document.getElementById("trackLink").href = track.url;
+        }
+
+        function nextTrack() {
+            currentIndex = (currentIndex + 1) % tracks.length;
+            updatePlayer();
+        }
+
+        function prevTrack() {
+            currentIndex = (currentIndex - 1 + tracks.length) % tracks.length;
+            updatePlayer();
+        }
+
+        // Roda automaticamente de capa a cada 5 segundos
+        setInterval(nextTrack, 5000);
+
+        // Inicializa a primeira música ao carregar
+        window.onload = updatePlayer;
+    </script>
 
 </body>
 </html>
