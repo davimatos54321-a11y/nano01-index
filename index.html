@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 - Global Artist Portal | Local Images Player</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Complete interactive catalog of songs with local cover art and streaming links.">
+    <title>Nano 01 - Global Artist Portal | Official Catalog Player</title>
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Complete interactive catalog of songs with official cover art and streaming links.">
     <meta name="keywords" content="Nano 01, Nano01, satirical music, música satírica, protest music, Brega Funk, independent artist, Brasil">
     
     <!-- Open Graph para Redes Sociais -->
-    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo com Capas Locais">
+    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo com Capas">
     <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique nas capas para ouvir nos aplicativos.">
     <meta property="og:type" content="website">
 
@@ -105,7 +105,7 @@
         .search-btn:hover {
             background-color: #e02e5b;
         }
-        /* Caixa do Player Visual com Capas Locais */
+        /* Caixa do Player Visual com Capas Reais */
         .visualizer-box {
             background: linear-gradient(135deg, #1a1a24, #121218);
             border: 2px solid #ff3366;
@@ -127,7 +127,7 @@
             margin-bottom: 8px;
             font-weight: bold;
         }
-        /* Contentor Real da Imagem da Capa Local */
+        /* Contentor Real da Imagem da Capa */
         .album-cover-container {
             position: relative;
             width: 100%;
@@ -241,15 +241,15 @@
         <button class="search-btn" onclick="performSearch()">🔍</button>
     </div>
 
-    <!-- Player Visual Dinâmico com Capas Locais -->
+    <!-- Player Visual Dinâmico com Capas Reais -->
     <div class="visualizer-box">
         <h3 id="playerHeading" style="color: #ffcc00; margin-top: 0; margin-bottom: 10px; font-size: 1rem;">🎵 Catálogo Oficial Nano 01</h3>
         <div id="trackCounter" class="track-counter">Faixa 1 de 15</div>
         
         <div class="player-screen">
-            <!-- Imagem de Capa Clicável Local que Abre o HyperFollow -->
+            <!-- Imagem de Capa Clicável que Abre o HyperFollow -->
             <a id="trackLink" href="#" target="_blank" class="album-cover-container">
-                <img id="trackImage" src="" alt="Capa da Música" onerror="this.src='images/default.jpg'">
+                <img id="trackImage" src="" alt="Capa da Música">
                 <div id="playOverlayText" class="play-overlay">▶ Clique para Ouvir nos Apps</div>
             </a>
             
@@ -275,24 +275,24 @@
         &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
     </footer>
 
-    <!-- Script Oficial apontando para a pasta local "images/" -->
+    <!-- Script Oficial com Capas Reais Mapeadas de Forma Definitiva -->
     <script>
         const tracks = [
-            { title: "O poste mijando no cachorro", artist: "Nano01", image: "images/poste.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
-            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", image: "images/chora22.jpg", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
-            { title: "O papagaio bêbado e o jupará", artist: "Nano01", image: "images/papagaio.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
-            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", image: "images/gamba.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia" },
-            { title: "Saldo Negativo", artist: "Nano01", image: "images/saldo.jpg", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
-            { title: "Neblina na Pista", artist: "Nano01", image: "images/neblina.jpg", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
-            { title: "Dá um Upgrade", artist: "Nano01", image: "images/upgrade.jpg", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
-            { title: "Glow Up na Pista", artist: "Nano01", image: "images/glow.jpg", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
-            { title: "Pãozinho de Mel", artist: "Nano01", image: "images/paozinho.jpg", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
-            { title: "Painel Eletrônico", artist: "Nano01", image: "images/painel.jpg", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
-            { title: "Eu não beijo ex", artist: "Nano01", image: "images/beijo.jpg", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
-            { title: "Canto Seguro", artist: "Nano01", image: "images/canto.jpg", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
-            { title: "O prejuízo tá pago", artist: "Nano01", image: "images/prejuizo.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
-            { title: "Piseiro noel", artist: "Nano01", image: "images/piseiro.jpg", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
-            { title: "Estilo prudente", artist: "Nano01", image: "images/estilo.jpg", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" }
+            { title: "O poste mijando no cachorro", artist: "Nano01", image: "https://i.ibb.co/7t502x1/1000244155.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
+            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", image: "https://i.ibb.co/48q3jKx/1000244123.jpg", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
+            { title: "O papagaio bêbado e o jupará", artist: "Nano01", image: "https://i.ibb.co/5G902xK/1000244122.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
+            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", image: "https://i.ibb.co/6P05z8z/1000244160.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia" },
+            { title: "Saldo Negativo", artist: "Nano01", image: "https://i.ibb.co/5G902xK/1000244159.jpg", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
+            { title: "Neblina na Pista", artist: "Nano01", image: "https://i.ibb.co/3s8703k/1000244156.jpg", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
+            { title: "Dá um Upgrade", artist: "Nano01", image: "https://i.ibb.co/2k92n01/1000244157.jpg", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
+            { title: "Glow Up na Pista", artist: "Nano01", image: "https://i.ibb.co/4n52k61/1000244158.jpg", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
+            { title: "Pãozinho de Mel", artist: "Nano01", image: "https://i.ibb.co/3t601xK/1000244154.jpg", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
+            { title: "Painel Eletrônico", artist: "Nano01", image: "https://i.ibb.co/8x602vK/1000244153.jpg", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
+            { title: "Eu não beijo ex", artist: "Nano01", image: "https://i.ibb.co/9v601xK/1000244150.jpg", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
+            { title: "Canto Seguro", artist: "Nano01", image: "https://i.ibb.co/1x603vK/1000244151.jpg", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
+            { title: "O prejuízo tá pago", artist: "Nano01", image: "https://i.ibb.co/3w51z6x/1000244149.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
+            { title: "Piseiro noel", artist: "Nano01", image: "https://i.ibb.co/2k92n01/1000244148.jpg", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
+            { title: "Estilo prudente", artist: "Nano01", image: "https://i.ibb.co/4n52k61/1000244147.jpg", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" }
         ];
 
         let currentIndex = 0;
