@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#050508">
-    <title>Nano 01 & Nano D. - Portal Oficial de IA & Streaming Global</title>
-    <meta name="description" content="Portal oficial e ecossistema de streaming dos artistas independentes Nano 01 e Nano D. Catálogo unificado de 73 faixas integrado com inteligência artificial.">
-    <meta name="keywords" content="Nano 01, Nano01, Nano D, Nano 01 Produções, streaming oficial, Spotify, Apple Music, Deezer, Amazon Music">
+    <title>Nano 01 & Nano D. - Portal Oficial de Streaming</title>
+    <meta name="description" content="Portal oficial dos artistas independentes Nano 01 e Nano D. Catálogo unificado de 73 faixas com audição direta.">
     
-    <!-- Open Graph Avançado para Integração Total com Buscas e Redes -->
-    <meta property="og:title" content="Nano 01 & Nano D. - Portal Oficial de Streaming">
-    <meta property="og:description" content="Ouça o catálogo completo de 73 faixas nas suas plataformas favoritas.">
+    <!-- Open Graph para Motores de Busca -->
+    <meta property="og:title" content="Nano 01 & Nano D. - Portal Oficial">
+    <meta property="og:description" content="Ouça o catálogo completo de 73 faixas nas plataformas oficiais.">
     <meta property="og:type" content="music.album">
     <meta property="og:url" content="https://davimatos54321-a11y.github.io/nano01-index/">
 
-    <!-- Protocolo de IA e Conhecimento Global Integrado com Google Search / Knowledge Graph -->
+    <!-- Schema.org de Autoridade para a Produtora e Artista -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -22,14 +21,14 @@
             {
                 "@type": "MusicGroup",
                 "name": "Nano 01",
-                "alternateName": ["Nano01", "Nano D.", "Nano 01 Oficial", "Nando 01", "Nano D"],
+                "alternateName": ["Nano01", "Nano D.", "Nano 01 Oficial", "Nando 01"],
                 "url": "https://davimatos54321-a11y.github.io/nano01-index/",
                 "sameAs": [
                     "https://open.spotify.com/artist/nano01",
                     "https://youtube.com/@Nano01-d6e",
                     "https://linktr.ee/nano01oficial"
                 ],
-                "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi", "Satirical Music"],
+                "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi"],
                 "nationality": "BR"
             },
             {
@@ -71,7 +70,6 @@
             font-size: 1.05rem;
             margin-bottom: 15px;
         }
-        /* Botão de Pesquisa por Voz Neural */
         .ai-voice-box {
             background: linear-gradient(135deg, #121218, #1b0033);
             border: 2px solid #00ffcc;
@@ -81,17 +79,12 @@
             margin: 0 auto 20px auto;
             cursor: pointer;
             box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
-            transition: transform 0.2s;
-        }
-        .ai-voice-box:hover {
-            transform: scale(1.02);
         }
         .ai-voice-text {
             color: #00ffcc;
             font-weight: bold;
             font-size: 0.95rem;
         }
-        /* Barra de Pesquisa */
         .search-container {
             max-width: 480px;
             margin: 0 auto 20px auto;
@@ -123,7 +116,6 @@
         .search-btn:hover {
             background-color: #e02e5b;
         }
-        /* Player Visual */
         .visualizer-box {
             background: linear-gradient(135deg, #1a1a24, #121218);
             border: 2px solid #ff3366;
@@ -219,7 +211,7 @@
             background: #ff3366;
         }
         
-        /* Modal de Seleção com Rolagem para abranger todas as plataformas */
+        /* Modal de Seleção Direta e Funcional */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -233,11 +225,9 @@
             background: #121218;
             border: 2px solid #ff3366;
             border-radius: 20px;
-            padding: 20px;
+            padding: 25px;
             width: 90%;
             max-width: 380px;
-            max-height: 80vh;
-            overflow-y: auto;
             text-align: center;
             box-shadow: 0 0 40px rgba(255, 51, 102, 0.5);
         }
@@ -252,12 +242,12 @@
             background: #1a1a24;
             color: white;
             border: 1px solid #ff3366;
-            padding: 10px;
-            margin: 8px 0;
+            padding: 12px;
+            margin: 10px 0;
             border-radius: 12px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: background 0.2s;
         }
         .platform-btn:hover {
@@ -327,7 +317,7 @@
             <div class="tech-bg-container" onclick="openPlatformModal()">
                 <div class="tech-content">
                     <div class="tech-watermark">NANO 01 & D.</div>
-                    <div class="tech-subtext">[ AI NEURAL STREAMING ]</div>
+                    <div class="tech-subtext">[ STREAMING OFICIAL ]</div>
                     <div class="play-overlay">▶ Escolher Plataforma</div>
                 </div>
             </div>
@@ -342,19 +332,13 @@
         </div>
     </div>
 
-    <!-- Modal Ampliado com Todas as Plataformas de Streaming -->
+    <!-- Modal Direto e Funcional com as Plataformas Oficiais -->
     <div id="platformModal" class="modal-overlay" onclick="closePlatformModalOnOutside(event)">
         <div class="modal-content">
             <div class="modal-title" id="modalSongTitle">Onde quer ouvir?</div>
-            <a id="linkSpotify" class="platform-btn" href="#" target="_blank">🟢 Spotify</a>
-            <a id="linkYouTube" class="platform-btn" href="#" target="_blank">🔴 YouTube Music</a>
-            <a id="linkApple" class="platform-btn" href="#" target="_blank">🟣 Apple Music</a>
-            <a id="linkDeezer" class="platform-btn" href="#" target="_blank">🟠 Deezer</a>
-            <a id="linkAmazon" class="platform-btn" href="#" target="_blank">🔵 Amazon Music</a>
-            <a id="linkAudiomack" class="platform-btn" href="#" target="_blank">🟡 Audiomack</a>
-            <a id="linkTidal" class="platform-btn" href="#" target="_blank">⚪ Tidal</a>
-            <a id="linkNapster" class="platform-btn" href="#" target="_blank">⚫ Napster</a>
-            <a id="linkPandora" class="platform-btn" href="#" target="_blank">🔵 Pandora</a>
+            <a id="linkSpotify" class="platform-btn" href="#" target="_blank">🟢 Ouvir no Spotify</a>
+            <a id="linkYouTube" class="platform-btn" href="#" target="_blank">🔴 Ouvir no YouTube Music</a>
+            <a id="linkApple" class="platform-btn" href="#" target="_blank">🟣 Ouvir no Apple Music</a>
             <button class="close-modal" onclick="closePlatformModal()">Fechar</button>
         </div>
     </div>
@@ -370,82 +354,82 @@
         &copy; 2026 Nano 01 Produções. All rights reserved.
     </footer>
 
-    <!-- Catálogo Completo e Motor de IA -->
+    <!-- Catálogo e Lógica Funcional -->
     <script>
         const tracks = [
-            { title: "Quebrando a Ilusão", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "The Street Lamp Pissing on the Dog", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O papagaio bêbado e o jupará", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Ghost of the 405", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Beyond the Invisible Screen", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Coffee Stains & Midnight Notes", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Curves of Midnight", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O poste mijando no cachorro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Window View", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Forbidden Fire", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Morning Coffee", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Staying Home", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Grito de um amor proibido", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Amor Dividido", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O fantasma da novinha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "The Soul of the People", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "A alma do povo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Soberania", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Ser pai não tem manual", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "A letra é minha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O dinossauro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "IA não tem alma", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Sinfonia binária", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Sem Atalho", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Dono do meu tempo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Clean Aesthetic", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Friday Night Vision", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Pix da patroa", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Quem cantar rap também ama", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O corre não espera", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O futuro é você", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Doutor da quebrada", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Código fraturado", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Protocolo de honra", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Protocolo de retorno", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Protocolo de distância", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Protocolo amarelo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Modão sertanejo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Hoje eu vou beber", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O gole do esquecimento", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O fantasma do lar", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "A caminhada", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "United We Rise", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Questão de tempo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Doi de mais", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Frutinha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Ponte pro amanhecer", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Midnight Canvas", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Estilo prudente", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Piseiro noel", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O prejuízo tá pago", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Eu não beijo ex", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Canto seguro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Coração embriagado", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Painel eletrônico", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Nova batida", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "The Chicago shift", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Pãozinho de mel", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Ema da Bahia", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Neblina na pista", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Upgrade", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Glow up", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Saldo negativo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Onde o fole mora", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Ritmo da roça", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "São João", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "O luxo da rua", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Fora do jogo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Vitrine de vidro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Máquina absoluta", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" },
-            { title: "Chamego do peão", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com", deezer: "https://www.deezer.com", amazon: "https://music.amazon.com", audiomack: "https://audiomack.com", tidal: "https://tidal.com", napster: "https://napster.com", pandora: "https://www.pandora.com" }
+            { title: "Quebrando a Ilusão", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "The Street Lamp Pissing on the Dog", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O papagaio bêbado e o jupará", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Ghost of the 405", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Beyond the Invisible Screen", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Coffee Stains & Midnight Notes", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Curves of Midnight", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O poste mijando no cachorro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Window View", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Forbidden Fire", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Morning Coffee", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Staying Home", artist: "Nano D.", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Grito de um amor proibido", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Amor Dividido", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O fantasma da novinha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "The Soul of the People", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "A alma do povo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Soberania", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Ser pai não tem manual", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "A letra é minha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O dinossauro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "IA não tem alma", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Sinfonia binária", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Sem Atalho", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Dono do meu tempo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Clean Aesthetic", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Friday Night Vision", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Pix da patroa", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Quem cantar rap também ama", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O corre não espera", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O futuro é você", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Doutor da quebrada", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Código fraturado", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Protocolo de honra", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Protocolo de retorno", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Protocolo de distância", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Protocolo amarelo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Modão sertanejo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Hoje eu vou beber", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O gole do esquecimento", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O fantasma do lar", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "A caminhada", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "United We Rise", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Questão de tempo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Doi de mais", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Frutinha", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Ponte pro amanhecer", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Midnight Canvas", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Estilo prudente", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Piseiro noel", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O prejuízo tá pago", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Eu não beijo ex", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Canto seguro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Coração embriagado", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Painel eletrônico", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Nova batida", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "The Chicago shift", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Pãozinho de mel", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Ema da Bahia", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Neblina na pista", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Upgrade", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Glow up", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Saldo negativo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Onde o fole mora", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Ritmo da roça", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "São João", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O gambá pegou a ema do Bahia", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "O luxo da rua", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Fora do jogo", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Vitrine de vidro", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Máquina absoluta", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
+            { title: "Chamego do peão", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" }
         ];
 
         let currentIndex = 0;
@@ -473,12 +457,6 @@
             document.getElementById("linkSpotify").href = track.spotify;
             document.getElementById("linkYouTube").href = track.youtube;
             document.getElementById("linkApple").href = track.apple;
-            document.getElementById("linkDeezer").href = track.deezer;
-            document.getElementById("linkAmazon").href = track.amazon;
-            document.getElementById("linkAudiomack").href = track.audiomack;
-            document.getElementById("linkTidal").href = track.tidal;
-            document.getElementById("linkNapster").href = track.napster;
-            document.getElementById("linkPandora").href = track.pandora;
             document.getElementById("platformModal").style.display = "flex";
         }
 
@@ -548,9 +526,9 @@
             rec.onresult = (e) => {
                 document.getElementById("searchInput").value = e.results[0][0].transcript;
                 performAISearch();
-                document.getElementById("aiVoicePrompt").innerText = "🌐 IA Neural Voice: Falar Música ou Artista";
+                document.getElementById("aiVoicePrompt").innerText = "🎤 IA Neural Voice: Falar Música ou Artista";
             };
-            rec.onerror = () => { document.getElementById("aiVoicePrompt").innerText = "🌐 IA Neural Voice: Falar Música ou Artista"; };
+            rec.onerror = () => { document.getElementById("aiVoicePrompt").innerText = "🎤 IA Neural Voice: Falar Música ou Artista"; };
             rec.start();
         }
 
