@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#050508">
-    <title>Nano 01 & Nano D. - Portal Oficial de Streaming</title>
-    <meta name="description" content="Portal oficial dos artistas Nano 01 e Nano D. Catálogo completo com 73 faixas nas plataformas principais.">
+    <title>Nano 01 Produções & Música - Portal Oficial dos Artistas Nano 01 e Nano D.</title>
+    <meta name="description" content="Site oficial da Nano 01 Produções e Nano 01 Música. Ouça o catálogo completo com 73 faixas dos artistas independentes Nano 01 e Nano D. nas plataformas de streaming.">
+    <meta name="keywords" content="Nano 01 Produções, Nano 01 Música, Nano 01, Nano01, Nano D, músicas independentes, streaming oficial">
     
-    <!-- Open Graph para Motores de Busca -->
-    <meta property="og:title" content="Nano 01 & Nano D. - Portal Oficial">
-    <meta property="og:description" content="Ouça o catálogo completo de 73 faixas nas plataformas oficiais.">
+    <!-- Open Graph focado na Produtora, Música e Artistas -->
+    <meta property="og:title" content="Nano 01 Produções & Música - Portal Oficial">
+    <meta property="og:description" content="Explore o catálogo completo de 73 faixas de Nano 01 e Nano D. pela Nano 01 Produções.">
     <meta property="og:type" content="music.album">
     <meta property="og:url" content="https://davimatos54321-a11y.github.io/nano01-index/">
 
-    <!-- Schema.org de Autoridade para a Produtora e Artista -->
+    <!-- Schema.org focado em Nano 01 Produções e Música para o Google Knowledge Graph -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "MusicGroup",
-                "name": "Nano 01",
-                "alternateName": ["Nano01", "Nano D.", "Nano 01 Oficial", "Nando 01"],
+                "@type": "MusicOrganization",
+                "name": "Nano 01 Produções",
+                "alternateName": ["Nano 01 Música", "Nano 01 Produções Musicais", "Estudio Nano 01"],
                 "url": "https://davimatos54321-a11y.github.io/nano01-index/",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Nano 01",
+                    "alternateName": ["Nano01", "Nano D."]
+                },
                 "sameAs": [
                     "https://open.spotify.com/artist/nano01",
                     "https://youtube.com/@Nano01-d6e",
                     "https://linktr.ee/nano01oficial"
-                ],
-                "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi"],
-                "nationality": "BR"
+                ]
             },
             {
-                "@type": "MusicOrganization",
-                "name": "Nano 01 Produções",
+                "@type": "MusicGroup",
+                "name": "Nano 01 Música",
+                "alternateName": ["Nano 01", "Nano01", "Nano D.", "Nando 01"],
                 "url": "https://davimatos54321-a11y.github.io/nano01-index/",
-                "founder": {
-                    "@type": "Person",
-                    "name": "Nano 01"
-                }
+                "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi", "Sertanejo"],
+                "nationality": "BR"
             }
         ]
     }
@@ -61,7 +64,7 @@
         }
         h1 {
             color: #ff3366;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 5px;
             letter-spacing: 1px;
         }
@@ -158,10 +161,10 @@
             padding: 20px;
         }
         .tech-watermark {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 900;
             color: rgba(255, 51, 102, 0.85);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 8px;
         }
@@ -211,7 +214,7 @@
             background: #ff3366;
         }
         
-        /* Modal Direto e Funcional com as 3 Principais Plataformas */
+        <!-- Modal de Seleção Direta -->
         .modal-overlay {
             display: none;
             position: fixed;
@@ -297,15 +300,15 @@
 </head>
 <body>
 
-    <h1>Nano 01 & Nano D.</h1>
-    <p class="subtitle">Portal Oficial & Produtora • IA Neural Integrada</p>
+    <h1>Nano 01 Produções & Música</h1>
+    <p class="subtitle">Portal Oficial • Nano 01 & Nano D.</p>
 
     <div class="ai-voice-box" onclick="startAIVoiceSearch()">
         <span class="ai-voice-text" id="aiVoicePrompt">🎤 Falar Nome da Música ou Artista</span>
     </div>
 
     <div class="search-container">
-        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar música..." onkeypress="handleSearch(event)">
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar música por nome..." onkeypress="handleSearch(event)">
         <button class="search-btn" onclick="performAISearch()">🔍</button>
     </div>
 
@@ -316,7 +319,7 @@
         <div class="player-screen">
             <div class="tech-bg-container" onclick="openPlatformModal()">
                 <div class="tech-content">
-                    <div class="tech-watermark">NANO 01 & D.</div>
+                    <div class="tech-watermark">NANO 01 MÚSICA</div>
                     <div class="tech-subtext">[ STREAMING OFICIAL ]</div>
                     <div class="play-overlay">▶ Escolher Plataforma</div>
                 </div>
@@ -332,7 +335,7 @@
         </div>
     </div>
 
-    <!-- Modal Direto com as 3 Principais Plataformas Oficiais -->
+    <!-- Modal de Seleção Direta -->
     <div id="platformModal" class="modal-overlay" onclick="closePlatformModalOnOutside(event)">
         <div class="modal-content">
             <div class="modal-title" id="modalSongTitle">Onde quer ouvir?</div>
@@ -351,10 +354,10 @@
     </div>
 
     <footer>
-        &copy; 2026 Nano 01 Produções. All rights reserved.
+        &copy; 2026 Nano 01 Produções & Música. All rights reserved.
     </footer>
 
-    <!-- Catálogo e Lógica Funcional -->
+    <!-- Catálogo Completo com as 73 Faixas e Motor de Busca Ativo por Nome -->
     <script>
         const tracks = [
             { title: "Quebrando a Ilusão", artist: "Nano01", spotify: "https://open.spotify.com/artist/nano01", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
@@ -475,10 +478,11 @@
         }
 
         function performAISearch() {
-            const query = normalizeStr(document.getElementById("searchInput").value);
+            const rawQuery = document.getElementById("searchInput").value;
+            const query = normalizeStr(rawQuery);
             if (!query) return;
 
-            if (query.includes("nano") || query.includes("nando") || query.includes("01") || query.includes("producoes")) {
+            if (query.includes("nano") || query.includes("producoes") || query.includes("musica")) {
                 updatePlayer();
                 return;
             }
@@ -506,7 +510,7 @@
                 currentIndex = bestMatchIndex;
                 updatePlayer();
             } else {
-                alert("IA Neural: Faixa encontrada no ecossistema global!");
+                alert("Música encontrada no catálogo oficial!");
             }
         }
 
@@ -522,7 +526,7 @@
             }
             const rec = new SpeechRecognition();
             rec.lang = 'pt-BR';
-            rec.onstart = () => { document.getElementById("aiVoicePrompt").innerText = "🎙️ IA Ouvindo..."; };
+            rec.onstart = () => { document.getElementById("aiVoicePrompt").innerText = "🎙️ Ouvindo..."; };
             rec.onresult = (e) => {
                 document.getElementById("searchInput").value = e.results[0][0].transcript;
                 performAISearch();
