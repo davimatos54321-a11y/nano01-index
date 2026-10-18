@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 - Global Artist Portal | Complete Catalog</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01 (Nano01, Nano D). Explore the complete music catalog including 'O poste mijando no cachorro'.">
+    <title>Nano 01 - Global Artist Portal | Official Music & Interactive Catalog</title>
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01 (Nano01, Nano D). Explore the complete music catalog and listen on your favorite apps.">
     <meta name="keywords" content="Nano 01, Nano01, Nano D, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brasil">
     
     <!-- Open Graph para Redes Sociais -->
-    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo & Links">
-    <meta property="og:description" content="Explore o catálogo global e interativo do artista independente de música satírica Nano 01.">
+    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Global & Músicas">
+    <meta property="og:description" content="Explore o portal global e interativo do artista independente Nano 01. Ouça em todas as plataformas.">
     <meta property="og:type" content="website">
 
-    <!-- Dados Estruturados de Indexação Universal (Schema.org com Catálogo) -->
+    <!-- Dados Estruturados de Indexação Universal (Schema.org / MusicGroup) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,7 +47,7 @@
     }
     </script>
 
-    <!-- Estilos para a Experiência Visual e Catálogo -->
+    <!-- Estilos Nível Ouro (Design Imersivo & Grelha de Lançamentos) -->
     <style>
         body {
             background-color: #0b0b0e;
@@ -59,29 +59,31 @@
         }
         h1 {
             color: #ff3366;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 5px;
+            letter-spacing: 1px;
         }
         .subtitle {
             color: #a0a0b0;
-            font-size: 1rem;
-            margin-bottom: 25px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
         }
+        /* Experiência Visual Ativa */
         .visualizer-box {
             background: linear-gradient(135deg, #1a1a24, #121218);
             border: 2px solid #ff3366;
-            border-radius: 15px;
-            padding: 25px;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-            box-shadow: 0 0 25px rgba(255, 51, 102, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
         }
         .pulse-circle {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             background: #ff3366;
             border-radius: 50%;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 20px auto;
             animation: pulseGlow 2s infinite;
         }
         @keyframes pulseGlow {
@@ -89,91 +91,148 @@
             70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255, 51, 102, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 51, 102, 0); }
         }
-        /* Secção do Catálogo de Músicas */
-        .catalog-container {
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-            background: #121218;
-            border: 1px solid #2a2a38;
-            border-radius: 15px;
-            padding: 20px;
+        /* Grelha de Lançamentos do Catálogo */
+        .releases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 850px;
+            margin: 0 auto 35px auto;
             text-align: left;
         }
-        .catalog-container h3 {
-            color: #ffcc00;
-            text-align: center;
-            margin-top: 0;
+        .release-card {
+            background: #121218;
+            border: 1px solid #2a2a38;
+            border-radius: 12px;
+            padding: 16px;
+            transition: transform 0.2s, border-color 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
-        .song-item {
-            padding: 10px 15px;
-            margin: 8px 0;
-            background: #1a1a24;
-            border-radius: 8px;
-            border-left: 4px solid #ff3366;
-            font-size: 0.95rem;
+        .release-card:hover {
+            transform: translateY(-4px);
+            border-color: #ff3366;
         }
-        .song-item span {
-            display: block;
-            font-size: 0.8rem;
+        .release-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .release-artist {
+            font-size: 0.85rem;
             color: #a0a0b0;
+            margin-bottom: 14px;
         }
-        /* Links Oficiais Estilizados */
+        .btn-listen {
+            display: block;
+            width: 100%;
+            background-color: #ff3366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+            box-sizing: border-box;
+        }
+        .btn-listen:hover {
+            background-color: #e02e5b;
+        }
+        /* Links Oficiais Globais */
         .links-container {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .btn-link {
-            background-color: #ff3366;
+            background-color: #1a1a24;
+            border: 1px solid #ff3366;
             color: white;
             padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.9rem;
             transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .btn-link:hover {
-            background-color: #e02e5b;
+            background-color: #ff3366;
             transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 40px;
+            color: #707080;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
     <h1>Nano 01</h1>
-    <p class="subtitle">Global Portal / Portal Oficial • Satirical & Protest Music</p>
+    <p class="subtitle">Global Portal • Independent Satirical & Protest Music</p>
 
-    <!-- Experiência Visual Tecnológica Integrada -->
+    <!-- Experiência Visual Ativa -->
     <div class="visualizer-box">
         <div class="pulse-circle"></div>
-        <h2>Experiência Visual Ativa</h2>
-        <p>A transmitir a essência da sátira e do protesto independente para todo o planeta.</p>
+        <h2>Experiência Global Ativa</h2>
+        <p>A conectar a arte independente e a sátira social a ouvintes em todo o planeta.</p>
     </div>
 
-    <!-- Catálogo Completo Visível para Pessoas e Motores de Busca -->
-    <div class="catalog-container">
-        <h3>Catálogo de Destaque / Featured Catalog</h3>
-        
-        <div class="song-item">
-            <strong>O poste mijando no cachorro</strong>
-            <span>The streetlight peeing on the dog / Satirical & Protest</span>
+    <!-- Catálogo de Lançamentos DistroKid -->
+    <div class="releases-grid">
+
+        <div class="release-card">
+            <div class="release-title">O poste mijando no cachorro</div>
+            <div class="release-artist">Nano01</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" target="_blank">Ouvir nos Apps / Play</a>
         </div>
 
-        <div class="song-item">
-            <strong>Chora no 22 Bebê</strong>
-            <span>Cry on the 22 Baby / Independent Release</span>
+        <div class="release-card">
+            <div class="release-title">Chora no 22 bebê</div>
+            <div class="release-artist">Nano01 / MC Ousadia</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" target="_blank">Ouvir nos Apps / Play</a>
         </div>
+
+        <div class="release-card">
+            <div class="release-title">O papagaio bêbado e o jupará</div>
+            <div class="release-artist">Nano01</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" target="_blank">Ouvir nos Apps / Play</a>
+        </div>
+
+        <div class="release-card">
+            <div class="release-title">Quebrando a Ilusão</div>
+            <div class="release-artist">Nano01</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" target="_blank">Ouvir nos Apps / Play</a>
+        </div>
+
+        <div class="release-card">
+            <div class="release-title">Ponte pro amanhecer</div>
+            <div class="release-artist">Nano01</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" target="_blank">Ouvir nos Apps / Play</a>
+        </div>
+
+        <div class="release-card">
+            <div class="release-title">Sem Atalho</div>
+            <div class="release-artist">Nano01</div>
+            <a class="btn-listen" href="https://distrokid.com/hyperfollow/nano01/sem-atalho" target="_blank">Ouvir nos Apps / Play</a>
+        </div>
+
     </div>
 
-    <h2>Acesso Rápido / Official Links</h2>
+    <h2>Links Oficiais Globais / Official Links</h2>
     <div class="links-container">
         <a class="btn-link" href="https://open.spotify.com/artist/nano01" target="_blank">Spotify</a>
         <a class="btn-link" href="https://youtube.com/@Nano01-d6e" target="_blank">YouTube Music</a>
-        <a class="btn-link" href="https://linktr.ee/nano01oficial" target="_blank">Linktree</a>
+        <a class="btn-link" href="https://linktr.ee/nano01oficial" target="_blank">Linktree Oficial</a>
     </div>
+
+    <footer>
+        &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
+    </footer>
 
 </body>
 </html>
