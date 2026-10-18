@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 - Global Artist Portal | Interactive Cover Player</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Click on any track to listen on your preferred streaming app.">
+    <title>Nano 01 - Global Artist Portal | Complete Interactive Catalog</title>
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Complete catalog of songs with direct streaming links.">
     <meta name="keywords" content="Nano 01, Nano01, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brasil">
     
     <!-- Open Graph para Redes Sociais -->
     <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo">
-    <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique para ouvir nos aplicativos.">
+    <meta property="og:description" content="Explore o catálogo global completo do artista Nano 01. Clique para ouvir nos aplicativos.">
     <meta property="og:type" content="website">
 
     <!-- Dados Estruturados de Indexação Universal (Schema.org) -->
@@ -73,7 +73,7 @@
             position: relative;
             width: 100%;
             height: 260px;
-            background: linear-gradient(135deg, #2a2a38, #1a1a24);
+            background: linear-gradient(135deg, #2a2a38, #121218);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -88,9 +88,9 @@
         }
         .cover-text {
             color: #ff3366;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 6px rgba(0,0,0,0.9);
             padding: 0 15px;
             text-align: center;
         }
@@ -106,6 +106,12 @@
             font-size: 0.85rem;
             font-weight: bold;
             box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+        .track-counter {
+            font-size: 0.8rem;
+            color: #ffcc00;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
         .track-title {
             font-size: 1.15rem;
@@ -172,9 +178,10 @@
     <h1>Nano 01</h1>
     <p class="subtitle">Global Portal • Interactive Catalog Player</p>
 
-    <!-- Player Visual Dinâmico no Topo com o Catálogo Completo -->
+    <!-- Player Visual Dinâmico no Topo com Catálogo Completo -->
     <div class="visualizer-box">
-        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 15px; font-size: 1rem;">🎵 Catálogo Completo Nano 01</h3>
+        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 10px; font-size: 1rem;">🎵 Catálogo Oficial Nano 01</h3>
+        <div id="trackCounter" class="track-counter">Faixa 1 de 70</div>
         
         <div class="player-screen">
             <!-- Bloco Clicável -->
@@ -205,7 +212,7 @@
         &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
     </footer>
 
-    <!-- Script com TODAS as músicas reais do projeto Nano 01 extraídas do DistroKid -->
+    <!-- Script com o Catálogo Completo (Mais de 70 músicas oficiais do Nano 01) -->
     <script>
         const tracks = [
             { title: "O poste mijando no cachorro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
@@ -223,7 +230,61 @@
             { title: "Protocolo de honra", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-honra" },
             { title: "Protocolo amarelo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-amarelo" },
             { title: "Soberania", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/soberania" },
-            { title: "A letra é minha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" }
+            { title: "A letra é minha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" },
+            { title: "O dinossauro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-dinossauro" },
+            { title: "IA não tem alma", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ia-nao-tem-alma" },
+            { title: "Sinfonia binária", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sinfonia-binaria" },
+            { title: "Sem atalho", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sem-atalho" },
+            { title: "Dono do meu tempo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/dono-do-meu-tempo" },
+            { title: "Clean aesthetic", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/clean-aesthetic" },
+            { title: "Friday night vision", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/friday-night-vision" },
+            { title: "Quem cantar rap também ama", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/quem-cantar-rap-tambem-ama" },
+            { title: "Protocolo de retorno", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-retorno" },
+            { title: "Protocolo de distância", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-distancia" },
+            { title: "Modão sertanejo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/modao-sertanejo" },
+            { title: "Hoje eu vou beber", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/hoje-eu-vou-beber" },
+            { title: "O gole do esquecimento", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-gole-do-esquecimento" },
+            { title: "O fantasma do lar", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-fantasma-do-lar" },
+            { title: "A caminhada", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-caminhada" },
+            { title: "United we rise", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/united-we-rise" },
+            { title: "Questão de tempo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/questao-de-tempo" },
+            { title: "Doi de mais", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/doi-de-mais" },
+            { title: "Frutinha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/frutinha" },
+            { title: "Midnight canvas", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/midnight-canvas" },
+            { title: "Estilo prudente", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" },
+            { title: "Piseiro noel", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
+            { title: "O prejuízo tá pago", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
+            { title: "Eu não beijo ex", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
+            { title: "Canto seguro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
+            { title: "Coração embriagado", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/coracao-embriagado" },
+            { title: "Painel eletrônico", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
+            { title: "Nova batida", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/nova-batida" },
+            { title: "The chicago shift", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-chicago-shift" },
+            { title: "Pãozinho de mel", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
+            { title: "Ema da bahia", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ema-da-bahia" },
+            { title: "Neblina na pista", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
+            { title: "Upgrade", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
+            { title: "Glow up", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
+            { title: "Saldo negativo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
+            { title: "Onde o fole mora", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/onde-o-fole-mora" },
+            { title: "Ritmo da roça", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ritmo-da-roca" },
+            { title: "São joão", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sao-joao" },
+            { title: "O luxo da rua", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-luxo-da-rua" },
+            { title: "Fora do jogo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/fora-do-jogo" },
+            { title: "Vitrine de vidro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/vitrine-de-vidro" },
+            { title: "Máquina absoluta", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/maquina-absoluta" },
+            { title: "Chamego do peão", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/chamego-do-peao" },
+            { title: "Código provado", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/codigo-provado" },
+            { title: "The useless one", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-useless-one" },
+            { title: "O inútil", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-inutil" },
+            { title: "The radio and the hoe", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-radio-and-the-hoe" },
+            { title: "O rádio é a enxada", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-radio-e-a-enxada" },
+            { title: "Stellar sovereignty", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/stellar-sovereignty" },
+            { title: "Soberania estelar", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/soberania-estelar" },
+            { title: "Oxigênio", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/oxigenio" },
+            { title: "Oxygen", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/oxygen" },
+            { title: "The vision is clear", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/the-vision-is-clear" },
+            { title: "Frequência nano", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/frequencia-nano" }
         ];
 
         let currentIndex = 0;
@@ -234,6 +295,7 @@
             document.getElementById("trackArtist").innerText = track.artist;
             document.getElementById("coverTitleText").innerText = track.title;
             document.getElementById("trackLink").href = track.url;
+            document.getElementById("trackCounter").innerText = `Faixa ${currentIndex + 1} de ${tracks.length}`;
         }
 
         function nextTrack() {
