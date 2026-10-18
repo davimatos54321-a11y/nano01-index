@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
     <title>Nano 01 - Global Artist Portal | Interactive Cover Player</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Click on any track cover to listen on your preferred streaming app.">
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Click on any track to listen on your preferred streaming app.">
     <meta name="keywords" content="Nano 01, Nano01, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brasil">
     
     <!-- Open Graph para Redes Sociais -->
     <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo">
-    <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique nas capas para ouvir.">
+    <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique para ouvir nos aplicativos.">
     <meta property="og:type" content="website">
 
     <!-- Dados Estruturados de Indexação Universal (Schema.org) -->
@@ -31,7 +31,7 @@
     }
     </script>
 
-    <!-- Estilos Nível Ouro para o Carrossel de Capas -->
+    <!-- Estilos Nível Ouro para o Player Interativo -->
     <style>
         body {
             background-color: #0b0b0e;
@@ -50,7 +50,7 @@
         .subtitle {
             color: #a0a0b0;
             font-size: 1.05rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         /* Caixa do Player Visual */
         .visualizer-box {
@@ -68,26 +68,31 @@
             padding: 15px;
             border: 1px solid #2a2a38;
         }
-        /* Capa Clicável */
+        /* Cartão Visual / Capa Estilizada */
         .album-cover-container {
             position: relative;
             width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, #2a2a38, #1a1a24);
             border-radius: 10px;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 12px;
             cursor: pointer;
-            display: block;
+            overflow: hidden;
+            border: 1px solid #ff3366;
         }
-        .album-cover-container img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+        .album-cover-container:hover {
+            opacity: 0.95;
         }
-        .album-cover-container:hover img {
-            transform: scale(1.02);
+        .cover-text {
+            color: #ff3366;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            padding: 0 15px;
+            text-align: center;
         }
         .play-overlay {
             position: absolute;
@@ -167,21 +172,21 @@
     <h1>Nano 01</h1>
     <p class="subtitle">Global Portal • Interactive Catalog Player</p>
 
-    <!-- Player Visual Dinâmico no Topo -->
+    <!-- Player Visual Dinâmico no Topo com o Catálogo Completo -->
     <div class="visualizer-box">
-        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 15px; font-size: 1rem;">🎵 Catálogo Completo em Destaque</h3>
+        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 15px; font-size: 1rem;">🎵 Catálogo Completo Nano 01</h3>
         
         <div class="player-screen">
-            <!-- Imagem da Capa Clicável -->
+            <!-- Bloco Clicável -->
             <a id="trackLink" href="#" target="_blank" class="album-cover-container">
-                <img id="trackImage" src="" alt="Capa da Música">
+                <div id="coverTitleText" class="cover-text">O poste mijando no cachorro</div>
                 <div class="play-overlay">▶ Clique para Ouvir nos Apps</div>
             </a>
             
-            <div id="trackTitle" class="track-title">Carregando...</div>
+            <div id="trackTitle" class="track-title">O poste mijando no cachorro</div>
             <div id="trackArtist" class="track-artist">Nano01</div>
 
-            <!-- Botões para Rodar as Capas -->
+            <!-- Botões para Rodar as Faixas -->
             <div class="player-controls">
                 <button class="ctrl-btn" onclick="prevTrack()">◀ Anterior</button>
                 <button class="ctrl-btn" onclick="nextTrack()">Seguinte ▶</button>
@@ -200,63 +205,25 @@
         &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
     </footer>
 
-    <!-- Script com TODAS as faixas oficiais do projeto Nano 01 -->
+    <!-- Script com TODAS as músicas reais do projeto Nano 01 extraídas do DistroKid -->
     <script>
         const tracks = [
-            {
-                title: "O poste mijando no cachorro",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/c359a686b24d7889e47761005fbc746c.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro"
-            },
-            {
-                title: "Chora no 22 bebê",
-                artist: "Nano01 / MC Ousadia",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/chora-no-22-bebe.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb"
-            },
-            {
-                title: "O papagaio bêbado e o jupará",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/papagaio-jupara.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar"
-            },
-            {
-                title: "Quebrando a Ilusão",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/quebrando-ilusao.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao"
-            },
-            {
-                title: "Ponte pro amanhecer",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ponte-amanhecer.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer"
-            },
-            {
-                title: "Sem Atalho",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/sem-atalho.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/sem-atalho"
-            },
-            {
-                title: "O gambá pegou a ema da bahia",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/gamba-ema.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia"
-            },
-            {
-                title: "Pix da patroa",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/pix-patroa.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/pix-da-patroa"
-            },
-            {
-                title: "O corre não espera",
-                artist: "Nano01",
-                image: "https://images.distrokid.com/image/upload/q_65/v1727734185/corre-espera.jpg",
-                url: "https://distrokid.com/hyperfollow/nano01/o-corre-nao-espera"
-            }
+            { title: "O poste mijando no cachorro", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
+            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
+            { title: "O papagaio bêbado e o jupará", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
+            { title: "Quebrando a Ilusão", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" },
+            { title: "Ponte pro amanhecer", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" },
+            { title: "Sem Atalho", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/sem-atalho" },
+            { title: "O gambá pegou a ema da bahia", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia" },
+            { title: "Pix da patroa", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/pix-da-patroa" },
+            { title: "O corre não espera", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-corre-nao-espera" },
+            { title: "O futuro é você", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/o-futuro-e-voce" },
+            { title: "Doutor da quebrada", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/doutor-da-quebrada" },
+            { title: "Código fraturado", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/codigo-fraturado" },
+            { title: "Protocolo de honra", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-honra" },
+            { title: "Protocolo amarelo", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/protocolo-amarelo" },
+            { title: "Soberania", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/soberania" },
+            { title: "A letra é minha", artist: "Nano01", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" }
         ];
 
         let currentIndex = 0;
@@ -265,7 +232,7 @@
             const track = tracks[currentIndex];
             document.getElementById("trackTitle").innerText = track.title;
             document.getElementById("trackArtist").innerText = track.artist;
-            document.getElementById("trackImage").src = track.image;
+            document.getElementById("coverTitleText").innerText = track.title;
             document.getElementById("trackLink").href = track.url;
         }
 
@@ -279,10 +246,10 @@
             updatePlayer();
         }
 
-        // Roda automaticamente de capa a cada 5 segundos
+        // Roda automaticamente de faixa a cada 5 segundos
         setInterval(nextTrack, 5000);
 
-        // Inicializa a primeira música ao carregar
+        // Inicializa ao carregar
         window.onload = updatePlayer;
     </script>
 
