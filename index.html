@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="qpnBaKz-lYORVoP0ms6eCvWrVKABzDaG8cTTGa7Ma6g" />
-    <title>Nano 01 - Global Artist Portal | Interactive Cover Player</title>
-    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01. Complete catalog of songs with direct streaming links and cover art.">
-    <meta name="keywords" content="Nano 01, Nano01, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brasil">
+    <title>Nano 01 - Global Artist Portal | International Voice & AI Search</title>
+    <meta name="description" content="Official global portal of independent satirical and protest music artist Nano 01 (Nano01). Multilingual voice-activated catalog with direct streaming apps.">
+    <meta name="keywords" content="Nano 01, Nano01, satirical music, música satírica, protest music, Brega Funk, O poste mijando no cachorro, independent artist, Brazil, global music">
     
-    <!-- Open Graph para Redes Sociais -->
-    <meta property="og:title" content="Nano 01 - Portal Oficial | Catálogo Completo com Capas">
-    <meta property="og:description" content="Explore o catálogo global do artista Nano 01. Clique nas capas para ouvir.">
+    <!-- Open Graph para Redes Sociais Globais -->
+    <meta property="og:title" content="Nano 01 - Global Portal | Official Music & Voice Search">
+    <meta property="og:description" content="Explore the complete multilingual catalog of independent artist Nano 01. Search by voice or text.">
     <meta property="og:type" content="website">
 
-    <!-- Dados Estruturados de Indexação Universal (Schema.org) -->
+    <!-- Dados Estruturados de Indexação Universal (Schema.org / Voz & Assistentes Inteligentes) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MusicGroup",
         "name": "Nano 01",
-        "alternateName": ["Nano01"],
+        "alternateName": ["Nano01", "Nano D"],
         "url": "https://youtube.com/@Nano01-d6e",
         "sameAs": [
             "https://linktr.ee/nano01oficial",
@@ -27,11 +27,24 @@
             "https://music.youtube.com/@Nano01-d6e"
         ],
         "genre": ["Brega Funk", "Protest Satire", "Comedy Music", "Satirical Music"],
-        "nationality": "BR"
+        "nationality": "BR",
+        "knowsAbout": ["Independent Music", "Satirical Protest Songs", "Brega Funk Global"],
+        "track": [
+            {
+                "@type": "MusicRecording",
+                "name": "O poste mijando no cachorro",
+                alternateName": ["The streetlight peeing on the dog", "El poste orinando al perro"]
+            },
+            {
+                "@type": "MusicRecording",
+                "name": "Chora no 22 Bebê",
+                alternateName": ["Cry on the 22 Baby"]
+            }
+        ]
     }
     </script>
 
-    <!-- Estilos Nível Ouro para o Player com Capas Reais -->
+    <!-- Estilos Nível Ouro Definitivos -->
     <style>
         body {
             background-color: #0b0b0e;
@@ -50,7 +63,60 @@
         .subtitle {
             color: #a0a0b0;
             font-size: 1.05rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+        }
+        /* Seletor de Idiomas / Tradutor Visual */
+        .language-selector {
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: #1a1a24;
+            color: #ff3366;
+            border: 1px solid #ff3366;
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 4px;
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background: #ff3366;
+            color: white;
+        }
+        /* Caixa de Pesquisa Inteligente Multilíngue */
+        .search-container {
+            max-width: 480px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            gap: 8px;
+        }
+        .search-input {
+            flex: 1;
+            background: #1a1a24;
+            border: 1px solid #ff3366;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+        .search-input::placeholder {
+            color: #808090;
+        }
+        .search-btn {
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-btn:hover {
+            background-color: #e02e5b;
         }
         /* Caixa do Player Visual */
         .visualizer-box {
@@ -172,33 +238,46 @@
 </head>
 <body>
 
-    <h1>Nano 01</h1>
-    <p class="subtitle">Global Portal • Interactive Catalog Player</p>
+    <h1 id="siteTitle">Nano 01</h1>
+    <p id="siteSubtitle" class="subtitle">Global Portal • International AI Voice Player</p>
 
-    <!-- Player Visual Dinâmico com Capas Reais -->
+    <!-- Tradutor / Seletor de Idiomas Dinâmico -->
+    <div class="language-selector">
+        <button class="lang-btn" onclick="setLanguage('pt')">🇧🇷 PT</button>
+        <button class="lang-btn" onclick="setLanguage('en')">🇺🇸 EN</button>
+        <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 ES</button>
+    </div>
+
+    <!-- Barra de Pesquisa Inteligente por Texto ou Voz -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search song or artist..." onkeypress="handleSearch(event)">
+        <button class="search-btn" onclick="performSearch()">🔍</button>
+    </div>
+
+    <!-- Player Visual Dinâmico Inteligente -->
     <div class="visualizer-box">
-        <h3 style="color: #ffcc00; margin-top: 0; margin-bottom: 10px; font-size: 1rem;">🎵 Catálogo Oficial Nano 01</h3>
+        <h3 id="playerHeading" style="color: #ffcc00; margin-top: 0; margin-bottom: 10px; font-size: 1rem;">🎵 Official Catalog Nano 01</h3>
         <div id="trackCounter" class="track-counter">Faixa 1 de 70</div>
         
         <div class="player-screen">
             <!-- Imagem de Capa Clicável -->
             <a id="trackLink" href="#" target="_blank" class="album-cover-container">
-                <img id="trackImage" src="" alt="Capa da Música">
-                <div class="play-overlay">▶ Clique para Ouvir nos Apps</div>
+                <img id="trackImage" src="" alt="Capa da Música" onerror="this.src='images/default.jpg'">
+                <div id="playOverlayText" class="play-overlay">▶ Listen on Apps</div>
             </a>
             
-            <div id="trackTitle" class="track-title">Carregando...</div>
+            <div id="trackTitle" class="track-title">Loading...</div>
             <div id="trackArtist" class="track-artist">Nano01</div>
 
             <!-- Botões para Rodar as Faixas -->
             <div class="player-controls">
-                <button class="ctrl-btn" onclick="prevTrack()">◀ Anterior</button>
-                <button class="ctrl-btn" onclick="nextTrack()">Seguinte ▶</button>
+                <button class="ctrl-btn" onclick="prevTrack()" id="btnPrev">◀ Prev</button>
+                <button class="ctrl-btn" onclick="nextTrack()" id="btnNext">Next ▶</button>
             </div>
         </div>
     </div>
 
-    <h2>Links Oficiais Globais / Official Links</h2>
+    <h2 id="officialLinksTitle">Official Links</h2>
     <div class="links-container">
         <a class="btn-link" href="https://open.spotify.com/artist/nano01" target="_blank">Spotify</a>
         <a class="btn-link" href="https://youtube.com/@Nano01-d6e" target="_blank">YouTube Music</a>
@@ -209,81 +288,124 @@
         &copy; 2026 Nano 01. All rights reserved. Global Independent Music.
     </footer>
 
-    <!-- Script com o Catálogo Completo e Links de Imagem Otimizados -->
+    <!-- Script de Inteligência Multilíngue, Tradução e Catálogo Completo -->
     <script>
         const tracks = [
-            { title: "O poste mijando no cachorro", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/c359a686b24d7889e47761005fbc746c.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
-            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/chora-no-22-bebe.jpg", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
-            { title: "O papagaio bêbado e o jupará", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/papagaio-jupara.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
-            { title: "Quebrando a Ilusão", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/quebrando-ilusao.jpg", url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" },
-            { title: "Ponte pro amanhecer", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ponte-amanhecer.jpg", url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" },
-            { title: "Sem Atalho", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/sem-atalho.jpg", url: "https://distrokid.com/hyperfollow/nano01/sem-atalho" },
-            { title: "O gambá pegou a ema da bahia", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/gamba-ema.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia" },
-            { title: "Pix da patroa", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/pix-patroa.jpg", url: "https://distrokid.com/hyperfollow/nano01/pix-da-patroa" },
-            { title: "O corre não espera", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/corre-espera.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-corre-nao-espera" },
-            { title: "O futuro é você", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/futuro-voce.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-futuro-e-voce" },
-            { title: "Doutor da quebrada", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/doutor-quebrada.jpg", url: "https://distrokid.com/hyperfollow/nano01/doutor-da-quebrada" },
-            { title: "Código fraturado", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/codigo-fraturado.jpg", url: "https://distrokid.com/hyperfollow/nano01/codigo-fraturado" },
-            { title: "Protocolo de honra", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/protocolo-honra.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-honra" },
-            { title: "Protocolo amarelo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/protocolo-amarelo.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-amarelo" },
-            { title: "Soberania", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/soberania.jpg", url: "https://distrokid.com/hyperfollow/nano01/soberania" },
-            { title: "A letra é minha", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/letra-minha.jpg", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" },
-            { title: "O dinossauro", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/dinossauro.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-dinossauro" },
-            { title: "IA não tem alma", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ia-alma.jpg", url: "https://distrokid.com/hyperfollow/nano01/ia-nao-tem-alma" },
-            { title: "Sinfonia binária", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/sinfonia-binaria.jpg", url: "https://distrokid.com/hyperfollow/nano01/sinfonia-binaria" },
-            { title: "Dono do meu tempo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/dono-tempo.jpg", url: "https://distrokid.com/hyperfollow/nano01/dono-do-meu-tempo" },
-            { title: "Clean aesthetic", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/clean-aesthetic.jpg", url: "https://distrokid.com/hyperfollow/nano01/clean-aesthetic" },
-            { title: "Friday night vision", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/friday-vision.jpg", url: "https://distrokid.com/hyperfollow/nano01/friday-night-vision" },
-            { title: "Quem cantar rap também ama", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/rap-ama.jpg", url: "https://distrokid.com/hyperfollow/nano01/quem-cantar-rap-tambem-ama" },
-            { title: "Protocolo de retorno", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/protocolo-retorno.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-retorno" },
-            { title: "Protocolo de distância", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/protocolo-distancia.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-distancia" },
-            { title: "Modão sertanejo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/modao-sertanejo.jpg", url: "https://distrokid.com/hyperfollow/nano01/modao-sertanejo" },
-            { title: "Hoje eu vou beber", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/hoje-beber.jpg", url: "https://distrokid.com/hyperfollow/nano01/hoje-eu-vou-beber" },
-            { title: "O gole do esquecimento", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/gole-esquecimento.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gole-do-esquecimento" },
-            { title: "O fantasma do lar", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/fantasma-lar.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-fantasma-do-lar" },
-            { title: "A caminhada", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/caminhada.jpg", url: "https://distrokid.com/hyperfollow/nano01/a-caminhada" },
-            { title: "United we rise", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/united-rise.jpg", url: "https://distrokid.com/hyperfollow/nano01/united-we-rise" },
-            { title: "Questão de tempo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/questao-tempo.jpg", url: "https://distrokid.com/hyperfollow/nano01/questao-de-tempo" },
-            { title: "Doi de mais", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/doi-mais.jpg", url: "https://distrokid.com/hyperfollow/nano01/doi-de-mais" },
-            { title: "Frutinha", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/frutinha.jpg", url: "https://distrokid.com/hyperfollow/nano01/frutinha" },
-            { title: "Midnight canvas", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/midnight-canvas.jpg", url: "https://distrokid.com/hyperfollow/nano01/midnight-canvas" },
-            { title: "Estilo prudente", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/estilo-prudente.jpg", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" },
-            { title: "Piseiro noel", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/piseiro-noel.jpg", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
-            { title: "O prejuízo tá pago", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/prejuizo-pago.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
-            { title: "Eu não beijo ex", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/beijo-ex.jpg", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
-            { title: "Canto seguro", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/canto-seguro.jpg", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
-            { title: "Coração embriagado", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/coracao-embriagado.jpg", url: "https://distrokid.com/hyperfollow/nano01/coracao-embriagado" },
-            { title: "Painel eletrônico", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/painel-eletronico.jpg", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
-            { title: "Nova batida", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/nova-batida.jpg", url: "https://distrokid.com/hyperfollow/nano01/nova-batida" },
-            { title: "The chicago shift", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/chicago-shift.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-chicago-shift" },
-            { title: "Pãozinho de mel", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/paozinho-mel.jpg", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
-            { title: "Ema da bahia", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ema-bahia.jpg", url: "https://distrokid.com/hyperfollow/nano01/ema-da-bahia" },
-            { title: "Neblina na pista", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/neblina-pista.jpg", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
-            { title: "Upgrade", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/upgrade.jpg", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
-            { title: "Glow up", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/glow-up.jpg", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
-            { title: "Saldo negativo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/saldo-negativo.jpg", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
-            { title: "Onde o fole mora", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/fole-mora.jpg", url: "https://distrokid.com/hyperfollow/nano01/onde-o-fole-mora" },
-            { title: "Ritmo da roça", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/ritmo-roca.jpg", url: "https://distrokid.com/hyperfollow/nano01/ritmo-da-roca" },
-            { title: "São joão", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/sao-joao.jpg", url: "https://distrokid.com/hyperfollow/nano01/sao-joao" },
-            { title: "O luxo da rua", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/luxo-rua.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-luxo-da-rua" },
-            { title: "Fora do jogo", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/fora-jogo.jpg", url: "https://distrokid.com/hyperfollow/nano01/fora-do-jogo" },
-            { title: "Vitrine de vidro", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/vitrine-vidro.jpg", url: "https://distrokid.com/hyperfollow/nano01/vitrine-de-vidro" },
-            { title: "Máquina absoluta", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/maquina-absoluta.jpg", url: "https://distrokid.com/hyperfollow/nano01/maquina-absoluta" },
-            { title: "Chamego do peão", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/chamego-peao.jpg", url: "https://distrokid.com/hyperfollow/nano01/chamego-do-peao" },
-            { title: "Código provado", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/codigo-provado.jpg", url: "https://distrokid.com/hyperfollow/nano01/codigo-provado" },
-            { title: "The useless one", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/useless-one.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-useless-one" },
-            { title: "O inútil", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/inutil.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-inutil" },
-            { title: "The radio and the hoe", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/radio-hoe.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-radio-and-the-hoe" },
-            { title: "O rádio é a enxada", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/radio-enxada.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-radio-e-a-enxada" },
-            { title: "Stellar sovereignty", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/stellar-sovereignty.jpg", url: "https://distrokid.com/hyperfollow/nano01/stellar-sovereignty" },
-            { title: "Soberania estelar", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/soberania-estelar.jpg", url: "https://distrokid.com/hyperfollow/nano01/soberania-estelar" },
-            { title: "Oxigênio", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/oxigenio.jpg", url: "https://distrokid.com/hyperfollow/nano01/oxigenio" },
-            { title: "Oxygen", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/oxygen.jpg", url: "https://distrokid.com/hyperfollow/nano01/oxygen" },
-            { title: "The vision is clear", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/vision-clear.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-vision-is-clear" },
-            { title: "Frequência nano", artist: "Nano01", image: "https://images.distrokid.com/image/upload/q_65/v1727734185/frequencia-nano.jpg", url: "https://distrokid.com/hyperfollow/nano01/frequencia-nano" }
+            { title: "O poste mijando no cachorro", artist: "Nano01", image: "images/poste.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-poste-mijando-no-cachorro" },
+            { title: "Chora no 22 bebê", artist: "Nano01 / MC Ousadia", image: "images/chora22.jpg", url: "https://distrokid.com/hyperfollow/nano01/chora-no-22-beb" },
+            { title: "O papagaio bêbado e o jupará", artist: "Nano01", image: "images/papagaio.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-papagaio-bbado-e-o-jupar" },
+            { title: "Quebrando a Ilusão", artist: "Nano01", image: "images/quebrando.jpg", url: "https://distrokid.com/hyperfollow/nano01/quebrando-a-ilusao" },
+            { title: "Ponte pro amanhecer", artist: "Nano01", image: "images/ponte.jpg", url: "https://distrokid.com/hyperfollow/nano01/ponte-pro-amanhecer" },
+            { title: "Sem Atalho", artist: "Nano01", image: "images/atalho.jpg", url: "https://distrokid.com/hyperfollow/nano01/sem-atalho" },
+            { title: "O gambá pegou a ema da bahia", artist: "Nano01", image: "images/gamba.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gmbi-pegou-a-ema-da-bahia" },
+            { title: "Pix da patroa", artist: "Nano01", image: "images/pix.jpg", url: "https://distrokid.com/hyperfollow/nano01/pix-da-patroa" },
+            { title: "O corre não espera", artist: "Nano01", image: "images/corre.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-corre-nao-espera" },
+            { title: "O futuro é você", artist: "Nano01", image: "images/futuro.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-futuro-e-voce" },
+            { title: "Doutor da quebrada", artist: "Nano01", image: "images/doutor.jpg", url: "https://distrokid.com/hyperfollow/nano01/doutor-da-quebrada" },
+            { title: "Código fraturado", artist: "Nano01", image: "images/codigo.jpg", url: "https://distrokid.com/hyperfollow/nano01/codigo-fraturado" },
+            { title: "Protocolo de honra", artist: "Nano01", image: "images/honra.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-honra" },
+            { title: "Protocolo amarelo", artist: "Nano01", image: "images/amarelo.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-amarelo" },
+            { title: "Soberania", artist: "Nano01", image: "images/soberania.jpg", url: "https://distrokid.com/hyperfollow/nano01/soberania" },
+            { title: "A letra é minha", artist: "Nano01", image: "images/letra.jpg", url: "https://distrokid.com/hyperfollow/nano01/a-letra-e-minha" },
+            { title: "O dinossauro", artist: "Nano01", image: "images/dinossauro.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-dinossauro" },
+            { title: "IA não tem alma", artist: "Nano01", image: "images/ia.jpg", url: "https://distrokid.com/hyperfollow/nano01/ia-nao-tem-alma" },
+            { title: "Sinfonia binária", artist: "Nano01", image: "images/sinfonia.jpg", url: "https://distrokid.com/hyperfollow/nano01/sinfonia-binaria" },
+            { title: "Dono do meu tempo", artist: "Nano01", image: "images/tempo.jpg", url: "https://distrokid.com/hyperfollow/nano01/dono-do-meu-tempo" },
+            { title: "Clean aesthetic", artist: "Nano01", image: "images/clean.jpg", url: "https://distrokid.com/hyperfollow/nano01/clean-aesthetic" },
+            { title: "Friday night vision", artist: "Nano01", image: "images/friday.jpg", url: "https://distrokid.com/hyperfollow/nano01/friday-night-vision" },
+            { title: "Quem cantar rap também ama", artist: "Nano01", image: "images/rap.jpg", url: "https://distrokid.com/hyperfollow/nano01/quem-cantar-rap-tambem-ama" },
+            { title: "Protocolo de retorno", artist: "Nano01", image: "images/retorno.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-retorno" },
+            { title: "Protocolo de distância", artist: "Nano01", image: "images/distancia.jpg", url: "https://distrokid.com/hyperfollow/nano01/protocolo-de-distancia" },
+            { title: "Modão sertanejo", artist: "Nano01", image: "images/modao.jpg", url: "https://distrokid.com/hyperfollow/nano01/modao-sertanejo" },
+            { title: "Hoje eu vou beber", artist: "Nano01", image: "images/beber.jpg", url: "https://distrokid.com/hyperfollow/nano01/hoje-eu-vou-beber" },
+            { title: "O gole do esquecimento", artist: "Nano01", image: "images/gole.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-gole-do-esquecimento" },
+            { title: "O fantasma do lar", artist: "Nano01", image: "images/fantasma.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-fantasma-do-lar" },
+            { title: "A caminhada", artist: "Nano01", image: "images/caminhada.jpg", url: "https://distrokid.com/hyperfollow/nano01/a-caminhada" },
+            { title: "United we rise", artist: "Nano01", image: "images/united.jpg", url: "https://distrokid.com/hyperfollow/nano01/united-we-rise" },
+            { title: "Questão de tempo", artist: "Nano01", image: "images/questao.jpg", url: "https://distrokid.com/hyperfollow/nano01/questao-de-tempo" },
+            { title: "Doi de mais", artist: "Nano01", image: "images/doi.jpg", url: "https://distrokid.com/hyperfollow/nano01/doi-de-mais" },
+            { title: "Frutinha", artist: "Nano01", image: "images/frutinha.jpg", url: "https://distrokid.com/hyperfollow/nano01/frutinha" },
+            { title: "Midnight canvas", artist: "Nano01", image: "images/midnight.jpg", url: "https://distrokid.com/hyperfollow/nano01/midnight-canvas" },
+            { title: "Estilo prudente", artist: "Nano01", image: "images/estilo.jpg", url: "https://distrokid.com/hyperfollow/nano01/estilo-prudente" },
+            { title: "Piseiro noel", artist: "Nano01", image: "images/piseiro.jpg", url: "https://distrokid.com/hyperfollow/nano01/piseiro-noel" },
+            { title: "O prejuízo tá pago", artist: "Nano01", image: "images/prejuizo.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-prejuizo-ta-pago" },
+            { title: "Eu não beijo ex", artist: "Nano01", image: "images/beijo.jpg", url: "https://distrokid.com/hyperfollow/nano01/eu-nao-beijo-ex" },
+            { title: "Canto seguro", artist: "Nano01", image: "images/canto.jpg", url: "https://distrokid.com/hyperfollow/nano01/canto-seguro" },
+            { title: "Coração embriagado", artist: "Nano01", image: "images/coracao.jpg", url: "https://distrokid.com/hyperfollow/nano01/coracao-embriagado" },
+            { title: "Painel eletrônico", artist: "Nano01", image: "images/painel.jpg", url: "https://distrokid.com/hyperfollow/nano01/painel-eletronico" },
+            { title: "Nova batida", artist: "Nano01", image: "images/batida.jpg", url: "https://distrokid.com/hyperfollow/nano01/nova-batida" },
+            { title: "The chicago shift", artist: "Nano01", image: "images/chicago.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-chicago-shift" },
+            { title: "Pãozinho de mel", artist: "Nano01", image: "images/paozinho.jpg", url: "https://distrokid.com/hyperfollow/nano01/paozinho-de-mel" },
+            { title: "Ema da bahia", artist: "Nano01", image: "images/ema.jpg", url: "https://distrokid.com/hyperfollow/nano01/ema-da-bahia" },
+            { title: "Neblina na pista", artist: "Nano01", image: "images/neblina.jpg", url: "https://distrokid.com/hyperfollow/nano01/neblina-na-pista" },
+            { title: "Upgrade", artist: "Nano01", image: "images/upgrade.jpg", url: "https://distrokid.com/hyperfollow/nano01/upgrade" },
+            { title: "Glow up", artist: "Nano01", image: "images/glow.jpg", url: "https://distrokid.com/hyperfollow/nano01/glow-up" },
+            { title: "Saldo negativo", artist: "Nano01", image: "images/saldo.jpg", url: "https://distrokid.com/hyperfollow/nano01/saldo-negativo" },
+            { title: "Onde o fole mora", artist: "Nano01", image: "images/fole.jpg", url: "https://distrokid.com/hyperfollow/nano01/onde-o-fole-mora" },
+            { title: "Ritmo da roça", artist: "Nano01", image: "images/ritmo.jpg", url: "https://distrokid.com/hyperfollow/nano01/ritmo-da-roca" },
+            { title: "São joão", artist: "Nano01", image: "images/saojoao.jpg", url: "https://distrokid.com/hyperfollow/nano01/sao-joao" },
+            { title: "O luxo da rua", artist: "Nano01", image: "images/luxo.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-luxo-da-rua" },
+            { title: "Fora do jogo", artist: "Nano01", image: "images/forajogo.jpg", url: "https://distrokid.com/hyperfollow/nano01/fora-do-jogo" },
+            { title: "Vitrine de vidro", artist: "Nano01", image: "images/vitrine.jpg", url: "https://distrokid.com/hyperfollow/nano01/vitrine-de-vidro" },
+            { title: "Máquina absoluta", artist: "Nano01", image: "images/maquina.jpg", url: "https://distrokid.com/hyperfollow/nano01/maquina-absoluta" },
+            { title: "Chamego do peão", artist: "Nano01", image: "images/chamego.jpg", url: "https://distrokid.com/hyperfollow/nano01/chamego-do-peao" },
+            { title: "Código provado", artist: "Nano01", image: "images/provado.jpg", url: "https://distrokid.com/hyperfollow/nano01/codigo-provado" },
+            { title: "The useless one", artist: "Nano01", image: "images/useless.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-useless-one" },
+            { title: "O inútil", artist: "Nano01", image: "images/inutil.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-inutil" },
+            { title: "The radio and the hoe", artist: "Nano01", image: "images/radiohoe.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-radio-and-the-hoe" },
+            { title: "O rádio é a enxada", artist: "Nano01", image: "images/enxada.jpg", url: "https://distrokid.com/hyperfollow/nano01/o-radio-e-a-enxada" },
+            { title: "Stellar sovereignty", artist: "Nano01", image: "images/stellar.jpg", url: "https://distrokid.com/hyperfollow/nano01/stellar-sovereignty" },
+            { title: "Soberania estelar", artist: "Nano01", image: "images/estelar.jpg", url: "https://distrokid.com/hyperfollow/nano01/soberania-estelar" },
+            { title: "Oxigênio", artist: "Nano01", image: "images/oxigenio.jpg", url: "https://distrokid.com/hyperfollow/nano01/oxigenio" },
+            { title: "Oxygen", artist: "Nano01", image: "images/oxygen.jpg", url: "https://distrokid.com/hyperfollow/nano01/oxygen" },
+            { title: "The vision is clear", artist: "Nano01", image: "images/vision.jpg", url: "https://distrokid.com/hyperfollow/nano01/the-vision-is-clear" },
+            { title: "Frequência nano", artist: "Nano01", image: "images/frequencia.jpg", url: "https://distrokid.com/hyperfollow/nano01/frequencia-nano" }
         ];
 
         let currentIndex = 0;
+        let currentLang = 'pt';
+
+        const translations = {
+            pt: {
+                subtitle: "Portal Global • Leitor Inteligente por IA e Voz",
+                searchPlaceholder: "Ex: O poste, chora no 22, pix...",
+                playerHeading: "🎵 Catálogo Oficial Nano 01",
+                playOverlay: "▶ Clique para Ouvir nos Apps",
+                prev: "◀ Anterior",
+                next: "Seguinte ▶",
+                linksTitle: "Links Oficiais Globais"
+            },
+            en: {
+                subtitle: "Global Portal • AI Voice & Smart Search Player",
+                searchPlaceholder: "Ex: Street lamp, cry on 22, pix...",
+                playerHeading: "🎵 Official Catalog Nano 01",
+                playOverlay: "▶ Listen on Apps",
+                prev: "◀ Prev",
+                next: "Next ▶",
+                linksTitle: "Official Global Links"
+            },
+            es: {
+                subtitle: "Portal Global • Reproductor Inteligente por IA",
+                searchPlaceholder: "Ej: El poste, chora no 22, pix...",
+                playerHeading: "🎵 Catálogo Oficial Nano 01",
+                playOverlay: "▶ Escuchar en Apps",
+                prev: "◀ Anterior",
+                next: "Siguiente ▶",
+                linksTitle: "Enlaces Oficiales Globales"
+            }
+        };
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.getElementById("siteSubtitle").innerText = translations[lang].subtitle;
+            document.getElementById("searchInput").placeholder = translations[lang].searchPlaceholder;
+            document.getElementById("playerHeading").innerText = translations[lang].playerHeading;
+            document.getElementById("playOverlayText").innerText = translations[lang].playOverlay;
+            document.getElementById("btnPrev").innerText = translations[lang].prev;
+            document.getElementById("btnNext").innerText = translations[lang].next;
+            document.getElementById("officialLinksTitle").innerText = translations[lang].linksTitle;
+            updatePlayer();
+        }
 
         function updatePlayer() {
             const track = tracks[currentIndex];
@@ -291,7 +413,9 @@
             document.getElementById("trackArtist").innerText = track.artist;
             document.getElementById("trackImage").src = track.image;
             document.getElementById("trackLink").href = track.url;
-            document.getElementById("trackCounter").innerText = `Faixa ${currentIndex + 1} de ${tracks.length}`;
+            
+            const totalText = currentLang === 'en' ? `Track ${currentIndex + 1} of ${tracks.length}` : (currentLang === 'es' ? `Pista ${currentIndex + 1} de ${tracks.length}` : `Faixa ${currentIndex + 1} de ${tracks.length}`);
+            document.getElementById("trackCounter").innerText = totalText;
         }
 
         function nextTrack() {
@@ -304,11 +428,29 @@
             updatePlayer();
         }
 
-        // Roda automaticamente de faixa a cada 5 segundos
-        setInterval(nextTrack, 5000);
+        function performSearch() {
+            const query = document.getElementById("searchInput").value.toLowerCase().trim();
+            if (!query) return;
 
-        // Inicializa ao carregar
-        window.onload = updatePlayer;
+            const foundIndex = tracks.findIndex(t => t.title.toLowerCase().includes(query) || t.artist.toLowerCase().includes(query));
+            
+            if (foundIndex !== -1) {
+                currentIndex = foundIndex;
+                updatePlayer();
+            } else {
+                const msg = currentLang === 'en' ? "Song not found in catalog!" : (currentLang === 'es' ? "¡Canción no encontrada!" : "Música não encontrada no catálogo!");
+                alert(msg);
+            }
+        }
+
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            }
+        }
+
+        setInterval(nextTrack, 6000);
+        window.onload = () => { setLanguage('pt'); };
     </script>
 
 </body>
