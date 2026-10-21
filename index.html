@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#050508">
     <title>Nano 01 Produções & Música - Portal Oficial dos Artistas Nano 01 e Nano D.</title>
     <meta name="description" content="Site oficial da Nano 01 Produções e Nano 01 Música. Ouça o catálogo completo com 73 faixas dos artistas independentes Nano 01 e Nano D. nas plataformas de streaming.">
-    <meta name="keywords" content="Nano 01 Produções, Nano 01 Música, Nano 01, Nano01, Nano D, músicas independentes, streaming oficial">
+    <meta name="keywords" content="Nano 01 Produções, Nano 01 Música, Nano 01, Nano01, Nano D, músicas independentes, streaming oficial, bass music">
     
-    <!-- Open Graph focado na Produtora, Música e Artistas -->
+    <!-- Open Graph Avançado -->
     <meta property="og:title" content="Nano 01 Produções & Música - Portal Oficial">
     <meta property="og:description" content="Explore o catálogo completo de 73 faixas de Nano 01 e Nano D. pela Nano 01 Produções.">
     <meta property="og:type" content="music.album">
     <meta property="og:url" content="https://davimatos54321-a11y.github.io/nano01-index/">
 
-    <!-- Schema.org focado em Nano 01 Produções e Música para o Google Knowledge Graph -->
+    <!-- Schema.org / JSON-LD Nível NASA: Grafo de Conhecimento e Mapeamento de Faixas -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -42,12 +42,37 @@
                 "url": "https://davimatos54321-a11y.github.io/nano01-index/",
                 "genre": ["Brega Funk", "Protest Satire", "Electronic", "Lofi", "Sertanejo"],
                 "nationality": "BR"
+            },
+            {
+                "@type": "MusicPlaylist",
+                "name": "Catálogo Oficial Nano 01 & Nano D.",
+                "numTracks": 73,
+                "track": [
+                    {
+                        "@type": "MusicRecording",
+                        "name": "Quebrando a Ilusão",
+                        "byArtist": {"@type": "MusicGroup", "name": "Nano01"},
+                        "inAlbum": {"@type": "MusicAlbum", "name": "Singles Nano 01"}
+                    },
+                    {
+                        "@type": "MusicRecording",
+                        "name": "O poste mijando no cachorro",
+                        "byArtist": {"@type": "MusicGroup", "name": "Nano01"},
+                        "inAlbum": {"@type": "MusicAlbum", "name": "Singles Nano 01"}
+                    },
+                    {
+                        "@type": "MusicRecording",
+                        "name": "Chora no 22 bebê",
+                        "byArtist": {"@type": "MusicGroup", "name": "Nano01 / MC Ousadia"},
+                        "inAlbum": {"@type": "MusicAlbum", "name": "Singles Nano 01"}
+                    }
+                ]
             }
         ]
     }
     </script>
 
-    <!-- Estilos de Alta Performance -->
+    <!-- Estilos de Alta Performance / Nível NASA -->
     <style>
         * {
             box-sizing: border-box;
@@ -171,7 +196,6 @@
             letter-spacing: 1px;
             margin-bottom: 10px;
         }
-        /* Estilização do Player Nativo Integrado */
         .preview-audio {
             width: 100%;
             max-width: 280px;
@@ -327,9 +351,8 @@
         <div class="player-screen">
             <div class="tech-bg-container">
                 <div class="tech-watermark">NANO 01 MÚSICA</div>
-                <div class="tech-subtext">[ PRÉ-PRÉVIA ONLINE ]</div>
+                <div class="tech-subtext">[ PROTOCOLO NASA / STREAMING ]</div>
                 
-                <!-- Player de Áudio Nativo Integrado na Tela Principal -->
                 <audio id="audioPreview" class="preview-audio" controls>
                     O seu navegador não suporta áudio.
                 </audio>
@@ -347,7 +370,7 @@
         </div>
     </div>
 
-    <!-- Modal de Seleção Direta (Abre só se o utilizador quiser ir para o app externo) -->
+    <!-- Modal de Seleção Direta -->
     <div id="platformModal" class="modal-overlay" onclick="closePlatformModalOnOutside(event)">
         <div class="modal-content">
             <div class="modal-title" id="modalSongTitle">Onde quer ouvir completo?</div>
@@ -369,7 +392,7 @@
         &copy; 2026 Nano 01 Produções & Música. All rights reserved.
     </footer>
 
-    <!-- Catálogo Completo Limpo e com Prévia Integrada -->
+    <!-- Catálogo Científico & Motor de IA -->
     <script>
         const tracks = [
             { title: "Quebrando a Ilusão", artist: "Nano01", preview: "https://p.scdn.co/mp3-preview/54497e68cfb939d8212176b9f2736166133efb25?cid=9635882568684d0cb8c20fcb69a92440", spotify: "https://open.spotify.com/track/5Ia3pOQJYEvl9cuMGRabLN", youtube: "https://youtube.com/@Nano01-d6e", apple: "https://music.apple.com" },
@@ -455,7 +478,6 @@
             document.getElementById("trackArtist").innerText = track.artist;
             document.getElementById("trackCounter").innerText = `Faixa ${currentIndex + 1} de ${tracks.length}`;
             
-            // Atualiza o player de áudio integrado na tela principal
             const audioElem = document.getElementById("audioPreview");
             if (track.preview) {
                 audioElem.src = track.preview;
