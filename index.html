@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#030712">
     <title>Nano 01 Produções & Música // Command Center VIP</title>
     <meta name="description" content="Portal oficial da Nano 01 Produções e Nano 01 Música. Ouça o catálogo completo com faixas dos artistas independentes Nano 01 e Nano D.">
-    <meta name="keywords" content="Nano 01 Produções, Nano 01 Música, Nano 01, Nano D, TikTok, Instagram, streaming oficial">
+    <meta name="keywords" content="Nano 01 Produções, Nano 01 Música, Nano 01, Nano D, Apple Music, Spotify, TikTok, Instagram">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Nano 01 Produções & Música - Command Center">
@@ -118,7 +118,7 @@
             100% { transform: scale(0.95); opacity: 0.8; }
         }
 
-        /* Bloco de Crescimento: Social Unlock VIP */
+        /* Bloco de Crescimento: Social Unlock & Push Alerts VIP */
         .growth-box {
             background: linear-gradient(135deg, #0b0f19, #1b0033);
             border: 1px solid var(--accent-pink);
@@ -159,7 +159,6 @@
         }
         .btn-unlock:hover { background: var(--accent-pink); color: var(--bg-color); box-shadow: 0 0 12px rgba(255,51,102,0.4); }
         .btn-unlock.verified { border-color: var(--accent-green); color: var(--accent-green); }
-        .btn-unlock.verified:hover { background: var(--accent-green); color: var(--bg-color); }
 
         .ai-voice-box {
             background: var(--panel-bg);
@@ -417,11 +416,11 @@
         </div>
     </header>
 
-    <!-- Bloco Growth Hacking: Social Unlock Integrado -->
+    <!-- Bloco VIP Seguro contra Pop-up Blockers -->
     <div class="growth-box">
-        <div class="growth-title">⚡ Área VIP // Social Unlock</div>
-        <div class="growth-desc">Siga os canais oficiais para desbloquear o acesso total ao catálogo e pré-estreias.</div>
-        <button class="btn-unlock" id="unlockBtn" onclick="executarSocialUnlock()">1. Seguir no Instagram & TikTok</button>
+        <div class="growth-title">⚡ Área VIP // Social Hub & Push</div>
+        <div class="growth-desc">Ative os alertas e escolha onde deseja seguir e ouvir os lançamentos oficiais.</div>
+        <button class="btn-unlock" id="unlockBtn" onclick="abrirHubVIP()">1. Ativar Alertas & Escolher Plataforma</button>
     </div>
 
     <div class="ai-voice-box" onclick="startAIVoiceSearch()">
@@ -456,12 +455,26 @@
         </div>
     </div>
 
-    <!-- Modal de Plataformas com os Links Oficiais Corretos -->
+    <!-- Modal do Hub VIP (Evita bloqueadores de pop-up e inclui Apple Music) -->
+    <div id="vipHubModal" class="modal-overlay" onclick="closeVipModalOnOutside(event)">
+        <div class="modal-content">
+            <div class="modal-title">Escolha a sua plataforma</div>
+            <a class="platform-btn" href="https://open.spotify.com/artist/nano01" target="_blank">🟢 Seguir no Spotify</a>
+            <a class="platform-btn" href="https://music.apple.com" target="_blank">🍎 Ouvir no Apple Music</a>
+            <a class="platform-btn" href="https://www.youtube.com/@Nano01oficial" target="_blank">🔴 YouTube Music (Canal)</a>
+            <a class="platform-btn" href="https://www.instagram.com/nano01oficial" target="_blank">📸 Seguir no Instagram</a>
+            <a class="platform-btn" href="https://www.tiktok.com/@nano01oficial" target="_blank">⚡ Seguir no TikTok</a>
+            <button class="close-modal" onclick="closeVipModal()">Fechar & Concluir</button>
+        </div>
+    </div>
+
+    <!-- Modal de Plataformas da Faixa Atual -->
     <div id="platformModal" class="modal-overlay" onclick="closePlatformModalOnOutside(event)">
         <div class="modal-content">
             <div class="modal-title" id="modalSongTitle">Onde quer ouvir?</div>
             <a id="linkHyperFollow" class="platform-btn" href="" target="_blank">🔗 Aceder HyperFollow (DistroKid)</a>
-            <a class="platform-btn" href="https://open.spotify.com/artist/nano01" target="_blank">🟢 Perfil no Spotify</a>
+            <a class="platform-btn" href="https://open.spotify.com/artist/nano01" target="_blank">🟢 Spotify</a>
+            <a class="platform-btn" href="https://music.apple.com" target="_blank">🍎 Apple Music</a>
             <a class="platform-btn" href="https://www.youtube.com/@Nano01oficial" target="_blank">🔴 YouTube Music</a>
             <button class="close-modal" onclick="closePlatformModal()">Fechar</button>
         </div>
@@ -480,7 +493,7 @@
     </footer>
 </div>
 
-<!-- Lógica JavaScript: Catálogo Completo + Social Unlock + Busca -->
+<!-- Lógica JavaScript -->
 <script>
     const tracks = [
         { title: "Quebrando a Ilusão", artist: "Nano01", preview: "https://p.scdn.co/mp3-preview/54497e68cfb939d8212176b9f2736166133efb25?cid=9635882568684d0cb8c20fcb69a92440", hyperfollow: "https://distrokid.com/hyperfollow/nano01/quebrando-a-iluso" },
@@ -546,7 +559,6 @@
     ];
 
     let currentIndex = 0;
-    let unlocked = false;
 
     function updatePlayer() {
         const track = tracks[currentIndex];
@@ -565,20 +577,36 @@
         }
     }
 
-    // Mecanismo de Growth Hacking (Social Unlock)
-    function executarSocialUnlock() {
-        // Abre o Instagram e TikTok oficiais numa nova aba para o fã seguir
-        window.open('https://www.instagram.com/nano01oficial', '_blank');
-        window.open('https://www.tiktok.com/@nano01oficial', '_blank');
-        
+    // Abre o Hub VIP (Solicita Push Notification + Abre Modal de Escolha Seguro)
+    async function abrirHubVIP() {
+        if ("Notification" in window) {
+            try {
+                const permission = await Notification.requestPermission();
+                if (permission === "granted") {
+                    new Notification("Nano 01 // Centro de Comando VIP", {
+                        body: "Notificações ativadas! Alertas de novos lançamentos prontos.",
+                    });
+                }
+            } catch (err) {
+                console.log("Erro ao solicitar notificações:", err);
+            }
+        }
+
+        document.getElementById("vipHubModal").style.display = "flex";
+
         const btn = document.getElementById('unlockBtn');
-        btn.innerText = "A verificar conexão com canais...";
-        
-        setTimeout(() => {
-            unlocked = true;
-            btn.innerText = "Acesso VIP Concedido ✔ (Seguidor Verificado)";
-            btn.classList.add('verified');
-        }, 2000);
+        btn.innerText = "Acesso VIP Ativo ✔ (Alertas & Plataformas)";
+        btn.classList.add('verified');
+    }
+
+    function closeVipModal() {
+        document.getElementById("vipHubModal").style.display = "none";
+    }
+
+    function closeVipModalOnOutside(event) {
+        if (event.target.id === "vipHubModal") {
+            closeVipModal();
+        }
     }
 
     function nextTrack() {
